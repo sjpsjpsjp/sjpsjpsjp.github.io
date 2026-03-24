@@ -9,102 +9,141 @@
 <body>
 
 <header>
-    <div class="site-name"><a href="index.html">Seth Pruitt</a></div>
-    <nav>
-        <a href="index.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="downloads.html" class="active">Downloads</a>
-    </nav>
+    <div class="header-inner">
+        <div class="site-name"><a href="index.html">Seth Pruitt</a></div>
+        <nav>
+            <a href="index.html" class="nav-link">About</a>
+
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" id="research-toggle" onclick="toggleDropdown()">
+                    Research <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu" id="research-dropdown">
+                    <div class="dropdown-section-label">Working Papers</div>
+                    <a href="research.html#empirical-virtue">Empirical Virtue of Complexity</a>
+                    <a href="research.html#short-selling">Short Selling &amp; Public Information</a>
+                    <a href="research.html#risk-disclosures">Risk Exposures from Disclosures <span style="font-size:0.8em;color:#8b2332;">(R&amp;R JFE)</span></a>
+                    <a href="research.html#dogs-cats">Dogs and Cats (Cash-Flow Predictability)</a>
+                    <a href="research.html#esg-pricing">ESG and Conditional Pricing of Risk</a>
+                    <a href="research.html#reconciling-trace">Reconciling TRACE Bond Returns</a>
+                    <a href="research.html#ipca">IPCA <span style="font-size:0.8em;color:#8b2332;">(R&amp;R QE)</span></a>
+                    <div class="dropdown-section-label">Published Papers</div>
+                    <a href="research.html#modeling-corp-bond">Modeling Corporate Bond Returns (JF '23)</a>
+                    <a href="research.html#understanding-momentum">Understanding Momentum (JFE '21)</a>
+                    <a href="research.html#earnings-risk">Earnings Risk in the Household (AERI '20)</a>
+                    <a href="research.html#chars-are-covs">Characteristics are Covariances (JFE '19)</a>
+                    <a href="research.html#liquidity-effects">Liquidity Effects of Bond Intervention (JFQA '18)</a>
+                    <a href="research.html#monetary-policy-zlb">Monetary Policy Rules at Zero (JMCB '17)</a>
+                    <a href="research.html#systemic-risk">Systemic Risk &amp; Macroeconomy (JFE '16)</a>
+                    <a href="research.html#three-pass">Three-Pass Regression Filter (JoE '15)</a>
+                    <a href="research.html#demand-youth">Demand for Youth (AER '13)</a>
+                    <a href="research.html#market-expectations">Market Expectations in Cross Section (JF '13)</a>
+                    <a href="research.html#uncertainty-models">Uncertainty over Models and Data (JMCB '12)</a>
+                    <a href="research.html#market-perceived">Market-Perceived Monetary Policy Rule (AEJMacro '11)</a>
+                </div>
+            </div>
+
+            <a href="downloads.html" class="nav-link active">Downloads</a>
+        </nav>
+    </div>
 </header>
 
-<main>
+<div class="page">
 
-    <div class="dl-group">
-        <h3>Kelly, Palhares, and Pruitt (2023) — <em>Journal of Finance</em></h3>
-        <ul>
-            <li><a href="https://www.dropbox.com/sh/4yu0xsopnnre571/AAAieXICkt2_iaoWEwNBkXfEa?dl=0">Code and Data</a>
-                (for publicly available data, see <a href="https://ssrn.com/abstract=4069478">Reconciling TRACE Bond Returns</a>)
-            </li>
-        </ul>
+    <div class="dl-grid">
+
+        <div class="dl-group">
+            <h3>Kelly, Palhares, and Pruitt (2023)<br><em>Journal of Finance</em></h3>
+            <ul>
+                <li><a href="https://www.dropbox.com/sh/4yu0xsopnnre571/AAAieXICkt2_iaoWEwNBkXfEa?dl=0">Code and Data</a></li>
+                <li><a href="https://ssrn.com/abstract=4069478">Publicly available data (TRACE)</a></li>
+            </ul>
+        </div>
+
+        <div class="dl-group">
+            <h3>Kelly, Moskowitz, and Pruitt (2021)<br><em>Journal of Financial Economics</em></h3>
+            <ul>
+                <li><a href="https://www.dropbox.com/sh/d1g2449o75siwqv/AACuryXLJnw9xhWJ2SDDvVS-a?dl=0">Code and Data</a></li>
+            </ul>
+        </div>
+
+        <div class="dl-group">
+            <h3>Pruitt and Turner (2020)<br><em>American Economic Review: Insights</em></h3>
+            <ul>
+                <li><a href="https://www.dropbox.com/s/50ekqg29e57tsxh/PruittTurner_AERI_Code_and_Data.zip?dl=0">Code and Data</a></li>
+            </ul>
+        </div>
+
+        <div class="dl-group">
+            <h3>Kelly, Pruitt, and Su (2019)<br><em>Journal of Financial Economics</em></h3>
+            <ul>
+                <li><a href="https://www.dropbox.com/sh/sykn8aac1e2s6ry/AAAsGmD_qKRqDpOQhRAyWir_a?dl=0">Code and Data</a></li>
+                <li><a href="corrigendum.pdf">Corrigendum</a> (updated Sept 2024)</li>
+            </ul>
+        </div>
+
+        <div class="dl-group">
+            <h3>Kelly, Pruitt, and Su — IPCA</h3>
+            <ul>
+                <li><a href="https://www.dropbox.com/sh/iw4esnml1ech355/AAAcc3w1TgIMDEqxhCLJg5Rxa?dl=0">Example MATLAB code folder</a></li>
+                <li><a href="ipca.py">Python code (Pruitt)</a></li>
+                <li><a href="ipca_public.py">Python code (contributed)</a></li>
+            </ul>
+        </div>
+
+        <div class="dl-group">
+            <h3>Kim and Pruitt (2017)<br><em>Journal of Money, Credit and Banking</em></h3>
+            <ul>
+                <li><a href="JMCB_Code_and_Data.zip">Code and Data</a></li>
+            </ul>
+        </div>
+
+        <div class="dl-group">
+            <h3>Giglio, Kelly, and Pruitt (2016)<br><em>Journal of Financial Economics</em></h3>
+            <ul>
+                <li><a href="GKPwebdata.zip">Data</a></li>
+                <li><a href="GKPwebcode.zip">Code</a></li>
+            </ul>
+        </div>
+
+        <div class="dl-group">
+            <h3>Kelly and Pruitt (2015)<br><em>Journal of Econometrics</em></h3>
+            <ul>
+                <li><a href="the3PRF.zip">Code</a></li>
+                <li><a href="WebAppendix110620.pdf">Web Appendix</a></li>
+                <li><a href="KellyPruitt_JoE2015_errata.pdf">Errata</a></li>
+            </ul>
+        </div>
+
+        <div class="dl-group">
+            <h3>Kelly and Pruitt (2013)<br><em>Journal of Finance</em></h3>
+            <ul>
+                <li><a href="PublicCode_Original.zip">Code</a></li>
+                <li><a href="PublicData_Original.zip">Data</a></li>
+            </ul>
+        </div>
+
     </div>
 
-    <div class="dl-group">
-        <h3>Kelly and Pruitt — Reconciling TRACE Bond Returns</h3>
-        <ul>
-            <li><a href="https://www.dropbox.com/sh/16uqp1ab73gxqnn/AABm0Da-0ezo9TgR0_g8bEc-a?dl=0">Publicly available data</a>:
-                characteristics and returns, in-sample factor/Gamma estimates
-            </li>
-        </ul>
-    </div>
+</div><!-- .page -->
 
-    <div class="dl-group">
-        <h3>Kelly, Moskowitz, and Pruitt (2021) — <em>Journal of Financial Economics</em></h3>
-        <ul>
-            <li><a href="https://www.dropbox.com/sh/d1g2449o75siwqv/AACuryXLJnw9xhWJ2SDDvVS-a?dl=0">Code and Data</a></li>
-        </ul>
-    </div>
+<footer>economics research by Seth Pruitt</footer>
 
-    <div class="dl-group">
-        <h3>Pruitt and Turner (2020) — <em>American Economic Review: Insights</em></h3>
-        <ul>
-            <li><a href="https://www.dropbox.com/s/50ekqg29e57tsxh/PruittTurner_AERI_Code_and_Data.zip?dl=0">Code and Data</a></li>
-        </ul>
-    </div>
-
-    <div class="dl-group">
-        <h3>Kelly, Pruitt, and Su (2019) — <em>Journal of Financial Economics</em></h3>
-        <ul>
-            <li><a href="https://www.dropbox.com/sh/sykn8aac1e2s6ry/AAAsGmD_qKRqDpOQhRAyWir_a?dl=0">Code and Data</a></li>
-            <li><a href="corrigendum.pdf">Corrigendum</a> (updated Sept 2024)</li>
-        </ul>
-    </div>
-
-    <div class="dl-group">
-        <h3>Kelly, Pruitt, and Su — Instrumented Principal Component Analysis (IPCA)</h3>
-        <ul>
-            <li><a href="https://www.dropbox.com/sh/iw4esnml1ech355/AAAcc3w1TgIMDEqxhCLJg5Rxa?dl=0">Example MATLAB code folder</a></li>
-            <li><a href="ipca.py">Python code (Pruitt)</a></li>
-            <li><a href="ipca_public.py">Python code (contributed)</a></li>
-        </ul>
-    </div>
-
-    <div class="dl-group">
-        <h3>Kim and Pruitt (2017) — <em>Journal of Money, Credit and Banking</em></h3>
-        <ul>
-            <li><a href="JMCB_Code_and_Data.zip">Code and Data</a></li>
-        </ul>
-    </div>
-
-    <div class="dl-group">
-        <h3>Giglio, Kelly, and Pruitt (2016) — <em>Journal of Financial Economics</em></h3>
-        <ul>
-            <li><a href="GKPwebdata.zip">Data</a></li>
-            <li><a href="GKPwebcode.zip">Code</a></li>
-        </ul>
-    </div>
-
-    <div class="dl-group">
-        <h3>Kelly and Pruitt (2015) — <em>Journal of Econometrics</em></h3>
-        <ul>
-            <li><a href="the3PRF.zip">Code</a></li>
-            <li><a href="WebAppendix110620.pdf">Web Appendix</a></li>
-            <li><a href="KellyPruitt_JoE2015_errata.pdf">Errata</a></li>
-        </ul>
-    </div>
-
-    <div class="dl-group">
-        <h3>Kelly and Pruitt (2013) — <em>Journal of Finance</em></h3>
-        <ul>
-            <li><a href="PublicCode_Original.zip">Code</a></li>
-            <li><a href="PublicData_Original.zip">Data</a></li>
-        </ul>
-    </div>
-
-</main>
-
-<footer>
-    economics research by Seth Pruitt
-</footer>
+<script>
+function toggleDropdown() {
+    const toggle = document.getElementById('research-toggle');
+    const menu   = document.getElementById('research-dropdown');
+    toggle.classList.toggle('open');
+    menu.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        document.getElementById('research-toggle').classList.remove('open');
+        document.getElementById('research-dropdown').classList.remove('open');
+    }
+});
+</script>
 
 </body>
 </html>

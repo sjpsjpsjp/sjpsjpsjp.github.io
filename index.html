@@ -9,15 +9,46 @@
 <body>
 
 <header>
-    <div class="site-name"><a href="index.html">Seth Pruitt</a></div>
-    <nav>
-        <a href="index.html" class="active">About</a>
-        <a href="research.html">Research</a>
-        <a href="downloads.html">Downloads</a>
-    </nav>
+    <div class="header-inner">
+        <div class="site-name"><a href="index.html">Seth Pruitt</a></div>
+        <nav>
+            <a href="index.html" class="nav-link active">About</a>
+
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" id="research-toggle" onclick="toggleDropdown()">
+                    Research <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu" id="research-dropdown">
+                    <div class="dropdown-section-label">Working Papers</div>
+                    <a href="research.html#empirical-virtue">Empirical Virtue of Complexity</a>
+                    <a href="research.html#short-selling">Short Selling &amp; Public Information</a>
+                    <a href="research.html#risk-disclosures">Risk Exposures from Disclosures <span style="font-size:0.8em;color:#8b2332;">(R&amp;R JFE)</span></a>
+                    <a href="research.html#dogs-cats">Dogs and Cats (Cash-Flow Predictability)</a>
+                    <a href="research.html#esg-pricing">ESG and Conditional Pricing of Risk</a>
+                    <a href="research.html#reconciling-trace">Reconciling TRACE Bond Returns</a>
+                    <a href="research.html#ipca">IPCA <span style="font-size:0.8em;color:#8b2332;">(R&amp;R QE)</span></a>
+                    <div class="dropdown-section-label">Published Papers</div>
+                    <a href="research.html#modeling-corp-bond">Modeling Corporate Bond Returns (JF '23)</a>
+                    <a href="research.html#understanding-momentum">Understanding Momentum (JFE '21)</a>
+                    <a href="research.html#earnings-risk">Earnings Risk in the Household (AERI '20)</a>
+                    <a href="research.html#chars-are-covs">Characteristics are Covariances (JFE '19)</a>
+                    <a href="research.html#liquidity-effects">Liquidity Effects of Bond Intervention (JFQA '18)</a>
+                    <a href="research.html#monetary-policy-zlb">Monetary Policy Rules at Zero (JMCB '17)</a>
+                    <a href="research.html#systemic-risk">Systemic Risk &amp; Macroeconomy (JFE '16)</a>
+                    <a href="research.html#three-pass">Three-Pass Regression Filter (JoE '15)</a>
+                    <a href="research.html#demand-youth">Demand for Youth (AER '13)</a>
+                    <a href="research.html#market-expectations">Market Expectations in Cross Section (JF '13)</a>
+                    <a href="research.html#uncertainty-models">Uncertainty over Models and Data (JMCB '12)</a>
+                    <a href="research.html#market-perceived">Market-Perceived Monetary Policy Rule (AEJMacro '11)</a>
+                </div>
+            </div>
+
+            <a href="downloads.html" class="nav-link">Downloads</a>
+        </nav>
+    </div>
 </header>
 
-<main>
+<div class="page">
 
     <div class="home-layout">
         <div class="home-photo">
@@ -59,48 +90,34 @@
     <h2 class="section-heading">Awards</h2>
 
     <ul class="awards-list">
-        <li>
-            <a href="https://icpmnetwork.com/company/roster/companyRosterDetails.html?companyId=20215&companyRosterId=30">
-                2022 International Centre for Pension Management Research Award (First Place)
-            </a>
-        </li>
-        <li>
-            <a href="https://rady.ucsd.edu/why/centers/pcam/research.html">
-                2022 Pacific Center for Asset Management Research Award
-            </a>
-        </li>
-        <li>
-            <a href="https://www.jfinec.com/fama-dfa-prize">
-                2019 Best Paper in <em>Journal of Financial Economics</em>, Fama/DFA Prize (First Place)
-            </a>
-        </li>
-        <li>
-            <a href="https://marriottschool.byu.edu/event/redrock2018/home">
-                2018 Best Paper, Red Rocks Finance Conference
-            </a>
-        </li>
-        <li>
-            <a href="https://www.jfinec.com/fama-dfa-prize">
-                2016 Best Paper in <em>Journal of Financial Economics</em>, Fama/DFA Prize (First Place)
-            </a>
-        </li>
-        <li>
-            <a href="https://www.q-group.org/Roger-F.Murray-Prize">
-                2015 Q-Group Roger F. Murray Prize (Third Place)
-            </a>
-        </li>
-        <li>
-            <a href="https://www.aqr.com/About-Us/AQR-Insight-Award">
-                2012 AQR Insight Award (First Prize)
-            </a>
-        </li>
+        <li><a href="https://icpmnetwork.com/company/roster/companyRosterDetails.html?companyId=20215&companyRosterId=30">2022 International Centre for Pension Management Research Award (First Place)</a></li>
+        <li><a href="https://rady.ucsd.edu/why/centers/pcam/research.html">2022 Pacific Center for Asset Management Research Award</a></li>
+        <li><a href="https://www.jfinec.com/fama-dfa-prize">2019 Best Paper in <em>Journal of Financial Economics</em>, Fama/DFA Prize (First Place)</a></li>
+        <li><a href="https://marriottschool.byu.edu/event/redrock2018/home">2018 Best Paper, Red Rocks Finance Conference</a></li>
+        <li><a href="https://www.jfinec.com/fama-dfa-prize">2016 Best Paper in <em>Journal of Financial Economics</em>, Fama/DFA Prize (First Place)</a></li>
+        <li><a href="https://www.q-group.org/Roger-F.Murray-Prize">2015 Q-Group Roger F. Murray Prize (Third Place)</a></li>
+        <li><a href="https://www.aqr.com/About-Us/AQR-Insight-Award">2012 AQR Insight Award (First Prize)</a></li>
     </ul>
 
-</main>
+</div><!-- .page -->
 
-<footer>
-    economics research by Seth Pruitt
-</footer>
+<footer>economics research by Seth Pruitt</footer>
+
+<script>
+function toggleDropdown() {
+    const toggle = document.getElementById('research-toggle');
+    const menu   = document.getElementById('research-dropdown');
+    toggle.classList.toggle('open');
+    menu.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        document.getElementById('research-toggle').classList.remove('open');
+        document.getElementById('research-dropdown').classList.remove('open');
+    }
+});
+</script>
 
 </body>
 </html>
