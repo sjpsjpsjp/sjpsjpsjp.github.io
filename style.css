@@ -1,0 +1,318 @@
+/* ================================================
+   sethpruitt.net — static site stylesheet
+   ================================================ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #1a1a1a;
+    background: #fff;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 28px 70px;
+}
+
+/* ---- Header & Nav ---- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 30px 0 16px;
+    border-bottom: 2px solid #1e3a5f;
+    margin-bottom: 40px;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+}
+
+.site-name a {
+    color: #1e3a5f;
+    text-decoration: none;
+}
+
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.92em;
+}
+
+nav a {
+    color: #1e3a5f;
+    text-decoration: none;
+    margin-left: 26px;
+    letter-spacing: 0.03em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+/* ---- Global links ---- */
+
+a {
+    color: #1e3a5f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Section headings ---- */
+
+h2.section-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1e3a5f;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    margin: 44px 0 20px;
+}
+
+/* ---- Home page ---- */
+
+.home-layout {
+    display: flex;
+    gap: 38px;
+    align-items: flex-start;
+}
+
+.home-photo {
+    flex: 0 0 210px;
+}
+
+.home-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.home-content p {
+    margin-bottom: 14px;
+}
+
+.contact-block {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    color: #444;
+    line-height: 1.9;
+    margin: 20px 0 0;
+    padding: 14px 16px;
+    background: #f7f8fa;
+    border-left: 3px solid #1e3a5f;
+}
+
+.contact-block a {
+    color: #1e3a5f;
+}
+
+.cv-links {
+    margin-bottom: 16px;
+}
+
+.cv-links a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.92em;
+}
+
+/* ---- Awards list ---- */
+
+.awards-list {
+    list-style: none;
+    padding: 0;
+}
+
+.awards-list li {
+    padding: 4px 0;
+    font-size: 0.95em;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.awards-list li:last-child {
+    border-bottom: none;
+}
+
+.awards-list li a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.awards-list li a:hover {
+    color: #1e3a5f;
+    text-decoration: underline;
+}
+
+/* ---- Research page ---- */
+
+.bib-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.paper {
+    margin-bottom: 38px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.paper:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.paper-title {
+    font-weight: bold;
+    font-size: 1.01em;
+    margin-bottom: 3px;
+    line-height: 1.4;
+}
+
+.paper-venue {
+    font-size: 0.93em;
+    margin-bottom: 3px;
+}
+
+.paper-venue .journal {
+    font-style: italic;
+}
+
+.paper-venue .lead {
+    font-style: italic;
+    color: #555;
+}
+
+.paper-authors {
+    font-size: 0.92em;
+    color: #555;
+    margin-bottom: 9px;
+}
+
+.paper-links {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 0;
+}
+
+.paper-links a {
+    margin-right: 14px;
+    white-space: nowrap;
+}
+
+.paper-abstract {
+    font-size: 0.925em;
+    color: #2a2a2a;
+    line-height: 1.62;
+}
+
+.paper-award {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    color: #7a5c00;
+    margin-top: 8px;
+}
+
+.paper-award a {
+    color: #7a5c00;
+}
+
+.paper-note {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    color: #555;
+    margin-top: 6px;
+}
+
+.rr-badge {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78em;
+    font-weight: bold;
+    color: #fff;
+    background: #1e3a5f;
+    padding: 1px 7px;
+    border-radius: 3px;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+}
+
+/* ---- Downloads page ---- */
+
+.dl-group {
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.dl-group:last-child {
+    border-bottom: none;
+}
+
+.dl-group h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95em;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.dl-group ul {
+    list-style: disc;
+    padding-left: 22px;
+}
+
+.dl-group ul li {
+    margin-bottom: 5px;
+    font-size: 0.94em;
+}
+
+/* ---- Footer ---- */
+
+footer {
+    margin-top: 64px;
+    padding-top: 14px;
+    border-top: 1px solid #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 620px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    nav a {
+        margin-left: 0;
+        margin-right: 18px;
+    }
+    .home-layout {
+        flex-direction: column;
+    }
+    .home-photo {
+        flex: 0 0 auto;
+        width: 160px;
+    }
+}

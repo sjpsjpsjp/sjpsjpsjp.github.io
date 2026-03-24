@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research – Seth Pruitt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="site-name"><a href="index.html">Seth Pruitt</a></div>
+    <nav>
+        <a href="index.html">About</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="downloads.html">Downloads</a>
+    </nav>
+</header>
+
+<main>
+
+    <p class="bib-link"><a href="pruitt_bib.bib">.bib file</a></p>
+
+    <!-- ======================================================
+         WORKING PAPERS
+         ====================================================== -->
+
+    <h2 class="section-heading">Working Papers</h2>
+
+    <div class="paper">
+        <div class="paper-title">
+            The Empirical Virtue of Complexity in Simple Economic Models
+        </div>
+        <div class="paper-authors">with K. Back and A. Ober</div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            Short Selling and the Processing of Public Information
+        </div>
+        <div class="paper-authors">with S. Ren</div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            Risk Exposures from Risk Disclosures: What They Said and How They Said It
+            <span class="rr-badge">R&amp;R</span>
+        </div>
+        <div class="paper-note"><em>Journal of Financial Economics</em></div>
+        <div class="paper-authors">with R. Mazumder and L. Ross</div>
+        <div class="paper-links">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4637697">SSRN</a>
+        </div>
+        <div class="paper-abstract">
+            We extract information from 10-K risk disclosures: topic models measure what is discussed,
+            and context models measure how it is discussed. We find that both contain significant predictive
+            information about future aggregate risk exposures, even controlling for (structured) firm
+            characteristics, and that this information is both economically valuable and statistically
+            distinct. We present evidence that management's discussion helps to predict some future
+            corporate actions, which in turn can alter the firm's exposure to aggregate risk.
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            Dogs and Cats Living Together: A Defense of Cash-Flow Predictability
+        </div>
+        <div class="paper-links">
+            <a href="https://ssrn.com/abstract=4343101">SSRN</a>
+        </div>
+        <div class="paper-abstract">
+            The dividend-price present-value identity includes buybacks and issuance, from an aggregate
+            perspective. Aggregate dividend-price ratios forecast buybacks and issuance, as well as returns,
+            in the data. An alternative aggregate ratio, combining dividends and buybacks, also forecasts
+            cash flows and returns. The long-run variance decomposition of either value ratio says that
+            both cash-flow and discount-rate expectations significantly drive stock prices.
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            ESG and the Conditional Pricing of Risk
+        </div>
+        <div class="paper-authors">
+            with <a href="https://wpcarey.asu.edu/people/profile/642883">L. Lindsey</a>
+            and <a href="https://sites.google.com/site/christophmschiller/">C. Schiller</a>
+        </div>
+        <div class="paper-links">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3975077">SSRN</a>
+        </div>
+        <div class="paper-abstract">
+            We evaluate ESG investing through the lens of conditional asset pricing. We find that ESG
+            characteristics do not define a new priced factor or deliver alpha, but they do explain
+            variation in firms' exposure to existing aggregate risks—particularly with respect to value.
+            These conditional beta effects differ across ESG data providers, revealing an important
+            economic dimension of ESG disagreement—even among positively correlated scores—helping to
+            reconcile conflicting findings on the "greenium" in the literature. Finally, we show that
+            negative ESG screening can improve a portfolio's ESG profile with little impact on
+            risk-adjusted returns.
+        </div>
+        <div class="paper-note">
+            Coverage: <a href="https://www.institutionalinvestor.com/article/b1vsfy9wv4bxwz/ESG-Investing-Poses-No-Significant-Cost-to-Investors">Institutional Investor</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            Reconciling TRACE Bond Returns
+        </div>
+        <div class="paper-authors">with <a href="https://www.bryankellyacademic.org/">B. Kelly</a></div>
+        <div class="paper-links">
+            <a href="https://ssrn.com/abstract=4069478">SSRN</a>
+            <a href="https://www.dropbox.com/sh/16uqp1ab73gxqnn/AABm0Da-0ezo9TgR0_g8bEc-a?dl=0">Publicly available data</a>
+        </div>
+        <div class="paper-abstract">
+            TRACE bond returns are meaningfully different from ICE bond return data used by banks,
+            asset managers, and hedge funds. The core results of Kelly et al. (2023) are robust to
+            instead using WRDS/TRACE data.
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="paper-title">
+            Instrumented Principal Component Analysis
+            <span class="rr-badge">R&amp;R</span>
+        </div>
+        <div class="paper-note"><em>Quantitative Economics</em></div>
+        <div class="paper-authors">
+            with <a href="https://www.bryankellyacademic.org/">B. Kelly</a>
+            and <a href="https://www.suyinan.com/">Y. Su</a>
+        </div>
+        <div class="paper-links">
+            <a href="https://ssrn.com/abstract=2983919">SSRN</a>
+            <a href="https://www.dropbox.com/sh/iw4esnml1ech355/AAAcc3w1TgIMDEqxhCLJg5Rxa?dl=0">Example MATLAB code</a>
+            <a href="ipca.py">Python code (Pruitt)</a>
+            <a href="ipca_public.py">Python code (contributed)</a>
+        </div>
+        <div class="paper-abstract">
+            We propose a new approach of latent factor analysis that, in addition to the main panel of
+            interest, introduces other relevant data that serve as instruments for dynamic factor loadings.
+            The method, called IPCA, provides a parsimonious means of incorporating vast conditioning
+            information into factor model estimates. This improves the efficiency of estimates for the
+            latent factors and their loadings, and helps to ascertain the economic relationships among
+            factors and individuals via the observable instruments. The estimation is fast to calculate
+            and accommodates unbalanced panels. We show consistency and asymptotic normality under
+            general panel data generating processes. We demonstrate the advantages of IPCA in simulated
+            data and in applications to equity asset pricing and international macroeconomics.
+        </div>
+    </div>
+
+    <!-- ======================================================
+         PUBLISHED PAPERS
+         ====================================================== -->
+
+    <h2 class="section-heading">Published Papers</h2>
+
+    <!-- 12 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="https://doi.org/10.1111/jofi.13233">Modeling Corporate Bond Returns</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Finance</span>, August 2023, 78(4): 1967–2008
+        </div>
+        <div class="paper-authors">
+            with <a href="https://www.bryankellyacademic.org/">B. Kelly</a> and D. Palhares
+        </div>
+        <div class="paper-links">
+            <a href="https://ssrn.com/abstract=3720789">SSRN</a>
+            <a href="https://www.dropbox.com/sh/4yu0xsopnnre571/AAAieXICkt2_iaoWEwNBkXfEa?dl=0">Code and Data</a>
+            <a href="https://faculti.net/modeling-corporate-bond-returns/">Faculti interview</a>
+        </div>
+        <div class="paper-abstract">
+            We propose a conditional factor model for corporate bond returns with five factors and
+            time-varying factor loadings. We have three main empirical findings. First, our factor model
+            excels in describing the risks and returns of corporate bonds, improving over previously
+            proposed models in the literature by a large margin. Second, our benchmark model recommends
+            a systematic bond investment portfolio that significantly outperforms leading corporate
+            credit investment strategies. Third, we find closer integration between debt and equity
+            markets than found in prior literature.
+        </div>
+        <div class="paper-note">
+            For publicly available data see <a href="https://ssrn.com/abstract=4069478">Reconciling TRACE Bond Returns</a>.
+        </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="https://doi.org/10.1016/j.jfineco.2020.06.024">Understanding Momentum and Reversal</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Financial Economics</span>, June 2021, 140(3): 726–743
+        </div>
+        <div class="paper-authors">
+            with <a href="https://www.bryankellyacademic.org/">B. Kelly</a>
+            and <a href="https://som.yale.edu/faculty/tobias-j-moskowitz">T. Moskowitz</a>
+        </div>
+        <div class="paper-links">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3610814">SSRN</a>
+            <a href="https://www.dropbox.com/sh/d1g2449o75siwqv/AACuryXLJnw9xhWJ2SDDvVS-a?dl=0">Code and Data</a>
+        </div>
+        <div class="paper-abstract">
+            Stock momentum, long-term reversal, and other past return characteristics that predict future
+            returns also predict future realized betas, suggesting these characteristics capture time-varying
+            risk compensation. We formalize this argument with a conditional factor pricing model. Using
+            instrumented principal components analysis, we estimate latent factors with time-varying factor
+            loadings that depend on observable firm characteristics. We show that factor loadings vary
+            significantly over time, even at short horizons over which the momentum phenomenon operates
+            (one year), and that this variation captures reliable conditional risk premia missed by other
+            factor models commonly used in the literature. Our estimates of conditional risk exposure can
+            explain a sizeable fraction of momentum and long-term reversal returns and can be used to
+            generate even stronger return predictions.
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20190096">Earnings Risk in the Household: Evidence from Millions of U.S. Tax Returns</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">American Economic Review: Insights</span>, June 2020, 2(2): 237–254
+        </div>
+        <div class="paper-authors">with N. Turner</div>
+        <div class="paper-links">
+            <a href="https://ssrn.com/abstract=3107794">SSRN</a>
+            <a href="PruittTurner_AERI_Code_and_Data.zip">Code and Data</a>
+        </div>
+        <div class="paper-abstract">
+            Using detailed IRS administrative data on millions of households, we find that households
+            effectively insure against much of the risk facing primary earners. We show that households
+            face less risk than males alone, and households face roughly half the countercyclical risk
+            increase. As a result of these risk differences, household certainty equivalent earnings
+            are 19% higher than for males alone, and household certainty equivalent earnings fall by
+            about half as much during recessions. To facilitate related research, we make available
+            the aggregated data used in our analysis.
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="https://doi.org/10.1016/j.jfineco.2019.05.001">Characteristics are Covariances: A Unified Model of Risk and Return</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Financial Economics</span>, December 2019, 134(3): 501–524
+            &nbsp;<span class="lead">lead article</span>
+        </div>
+        <div class="paper-authors">
+            with <a href="https://www.bryankellyacademic.org/">B. Kelly</a>
+            and <a href="https://www.suyinan.com/">Y. Su</a>
+        </div>
+        <div class="paper-links">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3032013">SSRN</a>
+            <a href="https://www.dropbox.com/sh/sykn8aac1e2s6ry/AAAsGmD_qKRqDpOQhRAyWir_a?dl=0">Code and Data</a>
+            <a href="corrigendum.pdf">Corrigendum</a> <span style="font-size:0.85em;color:#888;">(updated Sept 2024)</span>
+        </div>
+        <div class="paper-abstract">
+            We propose a new modeling approach for the cross section of returns. Our method, Instrumented
+            Principal Component Analysis (IPCA), allows for latent factors and time-varying loadings by
+            introducing observable characteristics that instrument for the unobservable dynamic loadings.
+            If the characteristics/expected return relationship is driven by compensation for exposure to
+            latent risk factors, IPCA will identify the corresponding latent factors. If no such factors
+            exist, IPCA infers that the characteristic effect is compensation without risk and allocates
+            it to an "anomaly" intercept. Studying returns and characteristics at the stock level, we find
+            that five IPCA factors explain the cross section of average returns significantly more
+            accurately than existing factor models and produce characteristic-associated anomaly intercepts
+            that are small and statistically insignificant. Furthermore, among a large collection of
+            characteristics explored in the literature, only 10 are statistically significant at the 1%
+            level in the IPCA specification and are responsible for nearly 100% of the model's accuracy.
+        </div>
+        <div class="paper-award">
+            <a href="https://www.jfinec.com/fama-dfa-prize">Winner of the 2019 Best Paper in JFE, Fama/DFA Prize (First Place)</a><br>
+            <a href="https://marriottschool.byu.edu/event/redrock2018/home">Winner of 2018 Best Paper, Red Rocks Finance Conference</a>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="https://doi.org/10.1017/S0022109017000898">The Liquidity Effects of Official Bond Market Intervention</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Financial and Quantitative Analysis</span>, February 2018, 53(1): 243–268
+        </div>
+        <div class="paper-authors">
+            with <a href="https://www.federalreserve.gov/econresdata/michiel-de-pooter.htm">M. De Pooter</a>
+            and R. Martin
+        </div>
+        <div class="paper-links">
+            <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2143326">SSRN</a>
+        </div>
+        <div class="paper-abstract">
+            To "ensure depth and liquidity," the European Central Bank intervened in sovereign debt
+            markets through its Securities Markets Programme (SMP), providing a unique opportunity
+            to estimate the effects of large-scale asset purchases on sovereign bond liquidity premia.
+            From reduced-form estimates, we find robust, economically significant impact and lasting
+            reductions in sovereign bonds' liquidity premia in response to official purchases. We
+            develop a search-based asset-pricing model to understand our empirical results. The theory
+            implies that bond liquidity premia fall in response to both official purchases and rising
+            sovereign default probabilities, as seen in the data.
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="http://onlinelibrary.wiley.com/doi/10.1111/jmcb.12391/full">Estimating Monetary Policy Rules When Nominal Interest Rates Are Stuck at Zero</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Money, Credit and Banking</span>, June 2017, 49(4): 585–602
+            &nbsp;<span class="lead">lead article</span>
+        </div>
+        <div class="paper-authors">
+            with <a href="http://econ.korea.ac.kr/new2/prof/prof.php?profid=jikim">J. Kim</a>
+        </div>
+        <div class="paper-links">
+            <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2312821">SSRN</a>
+            <a href="JMCB_Code_and_Data.zip">Code and Data</a>
+        </div>
+        <div class="paper-abstract">
+            Did the Federal Reserve's response to economic fundamentals change with the onset of the
+            Global Financial Crisis? Estimation of a monetary policy rule to answer this question faces
+            a censoring problem since the interest rate target has been set at the zero lower bound since
+            late 2008. Surveys by forecasters allow us to sidestep the problem and to use conventional
+            regressions and break tests. We find that, in the opinion of forecasters, the Fed's inflation
+            response has decreased and the unemployment response has increased, which suggests that the
+            Federal Reserve's commitment to stable inflation has become weaker in the eyes of the
+            professional forecasters.
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="http://dx.doi.org/10.1016/j.jfineco.2016.01.010">Systemic Risk and the Macroeconomy: An Empirical Evaluation</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Financial Economics</span>, March 2016, 119(3): 457–471
+            &nbsp;<span class="lead">lead article</span>
+        </div>
+        <div class="paper-authors">
+            with <a href="https://sites.google.com/site/stefanogiglio/">S. Giglio</a>
+            and <a href="https://www.bryankellyacademic.org/">B. Kelly</a>
+        </div>
+        <div class="paper-links">
+            <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2158347">SSRN</a>
+            <a href="GKPwebdata.zip">Data</a>
+            <a href="GKPwebcode.zip">Code</a>
+        </div>
+        <div class="paper-abstract">
+            This article studies how systemic risk and financial market distress affect the distribution
+            of shocks to real economic activity. We analyze how changes in 19 different measures of
+            systemic risk skew the distribution of subsequent shocks to industrial production and other
+            macroeconomic variables in the US and Europe over several decades. We also propose dimension
+            reduction estimators for constructing systemic risk indexes from the cross section of measures
+            and demonstrate their success in predicting future macroeconomic shocks out of sample.
+        </div>
+        <div class="paper-award">
+            <a href="https://www.jfinec.com/fama-dfa-prize">Winner of the 2016 Best Paper in JFE, Fama/DFA Prize (First Place)</a><br>
+            <a href="https://www.q-group.org/Roger-F.Murray-Prize">Winner of the 2015 Q-Group Roger F. Murray Prize</a>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="http://dx.doi.org/10.1016/j.jeconom.2015.02.011">The Three-Pass Regression Filter: A New Approach to Forecasting Using Many Predictors</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Econometrics</span>, June 2015, 186(2): 294–316
+        </div>
+        <div class="paper-authors">
+            with <a href="https://www.bryankellyacademic.org/">B. Kelly</a>
+        </div>
+        <div class="paper-links">
+            <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1868703">SSRN</a>
+            <a href="the3PRF.zip">Code</a>
+            <a href="WebAppendix110620.pdf">Web Appendix</a>
+            <a href="KellyPruitt_JoE2015_errata.pdf">Errata</a>
+        </div>
+        <div class="paper-abstract">
+            We forecast a single time series using many predictor variables with a new estimator called
+            the three-pass regression filter (3PRF). It is calculated in closed form and conveniently
+            represented as a set of ordinary least squares regressions. 3PRF forecasts are consistent
+            for the infeasible best forecast when both the time dimension and cross section dimension
+            become large. This requires specifying only the number of relevant factors driving the
+            forecast target, regardless of the total number of common factors driving the cross section
+            of predictors. The 3PRF is a constrained least squares estimator and reduces to partial
+            least squares as a special case. Simulation evidence confirms the 3PRF's forecasting
+            performance relative to alternatives. We explore two empirical applications: forecasting
+            macroeconomic aggregates with a large panel of economic indices, and forecasting stock
+            market returns with price–dividend ratios of stock portfolios.
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="http://www.aeaweb.org/articles.php?doi=10.1257/aer.103.7.3022">The Demand for Youth: Explaining Age Differences in the Volatility of Hours</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">American Economic Review</span>, December 2013, 103(7): 3022–3044
+        </div>
+        <div class="paper-authors">
+            with <a href="http://www.nirjaimovich.com/">N. Jaimovich</a>
+            and <a href="http://faculty.arts.ubc.ca/hsiu/">H. Siu</a>
+        </div>
+        <div class="paper-links">
+            <a href="demandyouth.pdf">Draft</a>
+            <a href="https://www.aeaweb.org/aer/data/dec2013/20110792_data.zip">Data and Code</a>
+        </div>
+        <div class="paper-abstract">
+            Over the business cycle young workers experience much greater volatility of hours worked
+            than prime-aged workers. This can arise from age differences in labor supply or labor demand
+            characteristics. To distinguish between these, we document that, for young workers, both
+            the cyclical volatilities of hours and wages are greater than those of the prime-aged. We
+            argue that a general class of models featuring only age-specific labor supply differences
+            cannot reconcile these facts. We then show that a simple model featuring labor demand
+            differences can.
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="https://doi.org/10.1111/jofi.12060">Market Expectations in the Cross Section of Present Values</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Finance</span>, October 2013
+            &nbsp;<span class="lead">lead article</span>
+        </div>
+        <div class="paper-authors">
+            with <a href="https://www.bryankellyacademic.org/">B. Kelly</a>
+        </div>
+        <div class="paper-links">
+            <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1752543">SSRN</a>
+            <a href="PublicCode_Original.zip">Code</a>
+            <a href="PublicData_Original.zip">Data</a>
+        </div>
+        <div class="paper-abstract">
+            Returns and cash flow growth for the aggregate U.S. stock market are highly and robustly
+            predictable. Using a single factor extracted from the cross section of book-to-market ratios,
+            we find an out-of-sample return forecasting R-squared as high as 13% at the annual frequency
+            (0.9% monthly). We document similar out-of-sample predictability for returns on value, size,
+            momentum, and industry-sorted portfolios. We present a model linking aggregate market
+            expectations to disaggregated valuation ratios in a dynamic latent factor system. We find
+            that spreads in growth and value portfolios' exposures to economic shocks are key to
+            identifying predictability and are consistent with duration-based theories of the value
+            premium. Our findings suggest that discount rates are far less persistent, and their shocks
+            far more volatile, than implied by leading asset pricing models.
+        </div>
+        <div class="paper-award">
+            <a href="https://www.aqr.com/About-Us/AQR-Insight-Award">Winner of the 2012 AQR Insight Award (First Prize)</a>
+            &nbsp;&nbsp;
+            <a href="http://www.reuters.com/article/2012/05/29/idUS134162+29-May-2012+BW20120529"><em>Press Release</em></a>
+        </div>
+        <div class="paper-note">
+            <a href="http://www.q-group.org/recently-funded/#2011">Awarded 2011 Q Group Research Grant</a>
+            (per law, Pruitt did not accept grant money)
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1538-4616.2011.00490.x/abstract">Uncertainty over Models and Data: The Rise and Fall of American Inflation</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">Journal of Money, Credit and Banking</span>, March–April 2012
+        </div>
+        <div class="paper-links">
+            <a href="umdrfai.pdf">Draft</a>
+        </div>
+        <div class="paper-abstract">
+            Economic agents who are uncertain of their economic model learn, and this learning is
+            sensitive to the presence of data uncertainty. I investigate this idea in a framework that
+            successfully describes inflation as a learning Federal Reserve's optimal policy but fails
+            to satisfactorily motivate these policy shifts. I modify the framework to account for data
+            uncertainty: the learning process is made more sluggish by its presence. Consequently, the
+            estimated model provides an explanation for the rise and fall in inflation: the concurrent
+            rise and fall in the perceived Phillips curve trade-off between inflation and unemployment.
+        </div>
+    </div>
+
+    <!-- 1 -->
+    <div class="paper">
+        <div class="paper-title">
+            <a href="http://www.aeaweb.org/articles.php?doi=10.1257/mac.3.3.1">Estimating the Market-Perceived Monetary Policy Rule</a>
+        </div>
+        <div class="paper-venue">
+            <span class="journal">American Economic Journal: Macroeconomics</span>, July 2011
+            &nbsp;<span class="lead">lead article</span>
+        </div>
+        <div class="paper-authors">
+            with <a href="http://www.econ.ucsd.edu/~jhamilto/">J. Hamilton</a> and S. Borger
+        </div>
+        <div class="paper-links">
+            <a href="mpmpr_draft.pdf">Draft</a>
+            <a href="http://www.aeaweb.org/aej/mac/app/2009-0151_app.pdf">Web Appendix</a>
+            <a href="http://www.aeaweb.org/aej/mac/data/2009-0151_data.zip">Data and Code</a>
+        </div>
+        <div class="paper-abstract">
+            We introduce a novel method for estimating a monetary policy rule using macroeconomic news.
+            We estimate directly the policy rule agents use to form their expectations by linking news'
+            effects on forecasts of both economic conditions and monetary policy. Evidence between 1994
+            and 2007 indicates that the market-perceived Federal Reserve policy rule changed: the output
+            response vanished, and the inflation response path became more gradual but larger in long-run
+            magnitude. These response coefficient estimates are robust to measurement and theoretical
+            issues with both potential output and the inflation target.
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    economics research by Seth Pruitt
+</footer>
+
+</body>
+</html>
