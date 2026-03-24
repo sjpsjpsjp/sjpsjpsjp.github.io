@@ -22,12 +22,15 @@
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.65;
     color: var(--text);
     background: var(--maroon-light);
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
 a {
@@ -72,8 +75,8 @@ nav {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
+    font-weight: 500;
 }
 
 nav a.nav-link {
@@ -106,8 +109,8 @@ nav a.nav-link.active {
     align-items: center;
     gap: 5px;
     transition: background 0.15s, color 0.15s;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
+    font-weight: 500;
     background: none;
     border: none;
     user-select: none;
@@ -188,9 +191,8 @@ nav a.nav-link.active {
 /* ---- Section headings ---- */
 
 h2.section-heading {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.82em;
-    font-weight: bold;
+    font-size: 0.78em;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--maroon);
@@ -225,12 +227,11 @@ h2.section-heading {
 
 .cv-links {
     margin-bottom: 16px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.92em;
+    font-weight: 500;
 }
 
 .contact-block {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.875em;
     color: #444;
     line-height: 1.9;
@@ -289,9 +290,8 @@ h2.section-heading {
 }
 
 .filter-bar-label {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.78em;
-    font-weight: bold;
+    font-size: 0.72em;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--text-muted);
@@ -300,8 +300,8 @@ h2.section-heading {
 }
 
 .filter-btn {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.82em;
+    font-size: 0.8em;
+    font-weight: 500;
     padding: 4px 12px;
     border-radius: 20px;
     border: 1.5px solid var(--maroon);
@@ -379,7 +379,6 @@ h2.section-heading {
 }
 
 .paper-links {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.85em;
     display: flex;
     flex-wrap: wrap;
@@ -407,8 +406,43 @@ h2.section-heading {
     line-height: 1.62;
 }
 
+/* ---- Abstract toggle ---- */
+.abstract-toggle {
+    margin-top: 10px;
+    cursor: pointer;
+}
+.abstract-toggle .abstract-label {
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--maroon);
+    text-transform: uppercase;
+    user-select: none;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.abstract-toggle .abstract-label .abstract-arrow {
+    font-style: normal;
+    margin-left: 3px;
+}
+.abstract-toggle .abstract-sentence,
+.abstract-toggle .abstract-full {
+    font-size: 0.915em;
+    color: #2a2a2a;
+    line-height: 1.62;
+    margin: 0;
+}
+.abstract-toggle:hover .abstract-label {
+    text-decoration: underline;
+}
+.abstract-toggle.no-expand {
+    cursor: default;
+}
+.abstract-toggle.no-expand:hover .abstract-label {
+    text-decoration: none;
+}
+
 .paper-award {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.85em;
     color: #7a5000;
     margin-top: 8px;
@@ -419,7 +453,6 @@ h2.section-heading {
 }
 
 .paper-note {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.85em;
     color: var(--text-muted);
     margin-top: 6px;
@@ -427,8 +460,7 @@ h2.section-heading {
 
 .rr-badge {
     display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.75em;
+    font-size: 0.72em;
     font-weight: bold;
     color: var(--white);
     background: var(--maroon);
@@ -446,8 +478,8 @@ h2.section-heading {
 }
 
 .tag {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.75em;
+    font-size: 0.72em;
+    font-weight: 500;
     padding: 2px 9px;
     border-radius: 12px;
     background: var(--maroon-light);
@@ -476,7 +508,6 @@ h2.section-heading {
 }
 
 .dl-group h3 {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.88em;
     font-weight: bold;
     color: var(--maroon-dark);
@@ -507,7 +538,6 @@ h2.section-heading {
 footer {
     text-align: center;
     padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8em;
     color: rgba(139,35,50,0.5);
     background: var(--maroon-light);
