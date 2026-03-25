@@ -363,7 +363,13 @@ h2.section-heading {
     color: #333;
 }
 
-.paper-venue .journal {
+.paper-venue .journal,
+.paper-meta .journal {
+    font-style: italic;
+}
+
+.paper-venue .journal a,
+.paper-meta .journal a {
     font-style: italic;
 }
 

@@ -457,7 +457,12 @@ def paper_html(p):
         lead = '&nbsp;<span class="lead">lead article</span>' if p['venue'].get('lead') else ''
         date = p['venue'].get('date','')
         date_str = f', {date}' if date else ''
-        venue_inner = f'<span class="journal">{p["venue"]["journal"]}</span>{date_str}{lead}'
+        jname = p["venue"]["journal"]
+        if p.get('title_url'):
+            jname_html = f'<a href="{p["title_url"]}">{jname}</a>'
+        else:
+            jname_html = jname
+        venue_inner = f'<span class="journal">{jname_html}</span>{date_str}{lead}'
         if p['authors']:
             L.append('            <div class="paper-meta">')
             L.append(f'                {venue_inner}<span class="meta-sep">&nbsp;&middot;&nbsp;</span><span class="paper-authors-inline">{p["authors"]}</span>')
