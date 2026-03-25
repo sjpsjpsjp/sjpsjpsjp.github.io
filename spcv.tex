@@ -1,0 +1,660 @@
+\documentclass[margin,line,12pt]{res}
+\usepackage[none]{hyphenat}
+\usepackage{fancyhdr}
+\usepackage{datetime}
+\newdateformat{monthyear}{\monthname\phantom{ }\THEYEAR}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6in
+\itemsep=0in
+\parsep=0in
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+\rhead{{\bf \Large{Seth Pruitt}}}
+\chead{}
+\lhead{}
+\lfoot{\footnotesize{{\it Updated \monthyear\today}}}
+\cfoot{}
+\rfoot{\thepage}
+
+\pagestyle{fancy}
+\thispagestyle{empty}
+\addtolength{\headsep}{1cm}
+\addtolength{\voffset}{-1cm}
+%\addtolength{\textheight}{0.5cm}
+\fancyheadoffset{0cm}
+\renewcommand{\headrulewidth}{0.6pt}
+\usepackage[pdftex]{hyperref}
+\usepackage{color}
+\definecolor{navyblue}{rgb}{0,0,0.6}
+\hypersetup{colorlinks=true,filecolor=blue,urlcolor=navyblue}
+
+\newcommand{\nirweb}{http://www.nirjaimovich.com/}
+\newcommand{\henryweb}{https://faculty.arts.ubc.ca/hsiu/}
+\newcommand{\bryanweb}{https://www.bryankellyacademic.org/}
+\newcommand{\jimweb}{http://www.econ.ucsd.edu/~jhamilto/}
+\newcommand{\michielweb}{http://www.federalreserve.gov/econresdata/michiel-de-pooter.htm}
+\newcommand{\jinillweb}{http://econ.korea.ac.kr/new2/prof/prof.php?profid=jikim}
+\newcommand{\stefanoweb}{https://sites.google.com/view/stefanogiglio/}
+\newcommand{\nickweb}{https://www.federalreserve.gov/econres/nick-turner.htm}
+\newcommand{\tobyweb}{https://som.yale.edu/faculty/tobias-j-moskowitz}
+\newcommand{\yinanweb}{https://www.suyinan.com/}
+\newcommand{\hankweb}{https://wpcarey.asu.edu/people/profile/2717225}
+\newcommand{\sunilweb}{https://search.asu.edu/profile/825492}
+\newcommand{\minweb}{https://sites.google.com/site/seungminahn/}
+\newcommand{\juheeweb}{https://www.juheebae.com/}
+\newcommand{\georgeweb}{https://wpcarey.asu.edu/people/profile/835462}
+\newcommand{\chrisweb}{https://sites.google.com/site/christophmschiller/}
+\newcommand{\lauraweb}{https://wpcarey.asu.edu/people/profile/642883}
+\newcommand{\andrewweb}{http://public.econ.duke.edu/~ap172/}
+\newcommand{\dongweb}{https://www.federalreserve.gov/econres/dong-hwan-oh.htm}
+\newcommand{\landonweb}{https://landonjross.com}
+\newcommand{\rahulweb}{https://www.mit.edu/~rahulmaz/}
+\newcommand{\kerryweb}{https://www.kerryback.com}
+\newcommand{\shuhaoweb}{https://www.shuhaoren.com}
+\newcommand{\alexanderweb}{https://www.alexander-ober.com}
+
+% ---- Web page metadata (produce no output in PDF) ----
+\newcommand{\webid}[1]{}
+\newcommand{\webshort}[1]{}
+\newcommand{\webfull}[1]{}
+\newcommand{\webtags}[1]{}
+\newcommand{\weblinks}[1]{}
+\newcommand{\webnotes}[1]{}
+\newcommand{\webauthors}[1]{}
+\newcommand{\webinstitution}[1]{}
+
+
+
+\begin{document}
+
+\name{\LARGE{Seth Pruitt} \vspace*{0in}}
+
+\begin{resume}
+\section{\sc\small Contact \\Information}
+\begin{tabular}{@{}p{3in}p{3in}}
+Department of Finance & \url{www.sethpruitt.net}\\
+W.P. Carey School of Business & \href{mailto:seth.pruitt@asu.edu}{\tt seth.pruitt@asu.edu}\\
+P.O. Box 873906 & \href{https://isearch.asu.edu/profile/2400780}{\tt W.P. Carey page} \\
+Tempe, AZ 85287-3906 &\href{https://scholar.google.com/citations?hl=en&user=yUoU8IcAAAAJ}{\tt Google Scholar page}\\
+{\tt (ph)} 480.727.0762 & \href{https://www.dropbox.com/s/tqmw4o1hfzj2ud5/spcv%20copy.pdf?dl=0}{\tt(click here for current version)}\\
+& \textit{Updated \monthyear\today}
+\end{tabular}
+
+\section{\sc\small Current \ \ Affiliations}
+\href{http://www.asu.edu}{\bf Arizona State University}, \href{http://wpcarey.asu.edu/}{\bf W.P. Carey School of Business} \hfill {2014/8 -- present}\\
+%\phantom{$\bullet$} Professor, \href{http://apps.wpcarey.asu.edu/directory/departments/profile.cfm?department=1039165}{Department of Finance} \quad 5/2023 - present\\
+\phantom{$\bullet$} Associate Professor (tenured), \href{http://apps.wpcarey.asu.edu/directory/departments/profile.cfm?department=1039165}{Department of Finance} \quad 5/2020 - present\\ 
+%\phantom{$\bullet$} Associate Professor (tenured), \href{http://apps.wpcarey.asu.edu/directory/departments/profile.cfm?department=1039165}{Department of Finance} \quad 2020/5 -- present\\
+\phantom{$\bullet$} Assistant Professor, \href{http://apps.wpcarey.asu.edu/directory/departments/profile.cfm?department=1039165}{Department of Finance} \quad 2014/8 -- 2020/5\\
+%\phantom{$\bullet$}\href{https://hkujcesgri.hku.hk/scholars/}{\bf HKU JCE Sustainability Global Reseach Institute}\\
+%\phantom{$\bullet$}\phantom{$\bullet$} Affiliated Researcher,  \quad 12/2024 --  present\\
+\href{https://academic.oup.com/jfec}{\it Journal of Financial Econometrics} \hfill {2025/10 -- present}\\
+\phantom{$\bullet$} Associate Editor
+
+\section{\sc\small Past \\ Affiliations}
+\href{http://www.aqr.com}{\bf AQR Capital Management, LLC} \hfill {2018/4 -- 2023/6}\\
+\phantom{$\bullet$} Consultant\\
+\href{http://www.federalreserve.gov/}{\bf Federal Reserve Board}, Washington, DC \hfill {2008/8 -- 2014/8}\\
+\phantom{$\bullet$} Senior Economist, \href{http://www.federalreserve.gov/econresdata/ifstaff.htm}{Division of International Finance} \quad 2013/9 -- 2014/8\\
+\phantom{$\bullet$} \phantom{coo} Visiting, \href{http://www.federalreserve.gov/econresdata/fsprstaff.htm}{Office of Financial Stability} \quad 2013/6 -- 2014/8\\
+\phantom{$\bullet$} Economist, \href{http://www.federalreserve.gov/econresdata/ifstaff.htm}{Division of International Finance} \quad 2008/8 -- 2013/9
+\\
+\phantom{$\bullet$}\phantom{$\bullet$}\href{http://advanced.jhu.edu/academic/applied-economics/}{\bf Johns Hopkins University}, Washington, DC \hfill 2010/1 -- 2011/5\\
+\phantom{$\bullet$}\phantom{$\bullet$}\phantom{$\bullet$}\phantom{$\bullet$} Adjunct Assistant Professor, \href{http://advanced.jhu.edu/faculty/view/?id=1032}{Economics Department} \\
+\phantom{$\bullet$}\phantom{$\bullet$}\href{http://www.georgetown.edu/}{\bf Georgetown University}, Washington, DC \hfill 2009/9 -- 2010/12\\
+\phantom{$\bullet$}\phantom{$\bullet$}\phantom{$\bullet$}\phantom{$\bullet$} Adjunct Assistant Professor, \href{http://econ.georgetown.edu/}{Economics Department}
+
+
+\section{\sc\small Education}
+\href{http://ucsd.edu}{\bf University of California, San Diego}, La Jolla, CA \hfill {2003/8 -- 2008/6}\\
+$\bullet$ Ph.D., \href{http://econ.ucsd.edu}{Economics} -- 2008/6\\
+$\bullet$ M.A., \href{http://econ.ucsd.edu}{Economics} --  2005/6\\
+\href{http://arizona.edu/}{\bf University of Arizona}, Tucson, AZ \hfill {1998/8 -- 2002/5} \\
+$\bullet$ B.A., \href{http://www.honors.arizona.edu}{International Studies} -- 2002/5
+
+\section{\sc\small Focus}
+Asset pricing, macroeconomics, econometrics
+
+%\newpage
+
+\section{\href{http://www.sethpruitt.net/research\#workingpapers}{\sc\small Working\\ Papers}}
+\begin{list}{}{\leftmargin=1em}
+\setlength{\itemsep}{0pt}
+\setlength{\itemindent}{-18pt}
+
+\item{\samepage
+	\href{}{``The Empirical Virtue of Complexity in Simple Economic Models''} {(with \href{\kerryweb}{K. Back} and \href{\alexanderweb}{A. Ober})}
+	\webid{empirical-virtue}
+	\webauthors{Back, Kerry and Ober, Alexander and Pruitt, Seth}
+	\webinstitution{Rice University, Rice University, and Arizona State University}
+	\webshort{We demonstrate that empirical complexity is advantageous even for data simulated from simple economic models.}
+	\webtags{asset-pricing,econometrics,factor-models,equity}
+	}
+\item{\samepage
+	\href{}{``Short Selling and the Processing of Public Information''} {(with \href{\shuhaoweb}{S. Ren})}
+	\webid{short-selling}
+	\webauthors{Pruitt, Seth and Ren, Shuhao}
+	\webinstitution{Arizona State University and Louisiana State University}
+	\webshort{We study how short sellers incorporate publicly available information into asset prices.}
+	\webtags{asset-pricing,equity,text-data}
+	}
+	
+\item{\samepage
+	\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4637697}{``Risk exposures from risk disclosures: What they said and how they said it''} {(with \href{\rahulweb}{R. Mazumder} and \href{\landonweb}{L. Ross})}\\ {R\&R, \emph{Journal of Financial Economics}}
+	\webid{risk-disclosures}
+	\webauthors{Mazumder, Rahul and Pruitt, Seth and Ross, Landon}
+	\webinstitution{MIT, Arizona State University, and SEC}
+	\weblinks{SSRN::https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4637697}
+	\webshort{The content and tone of 10-K risk disclosures each independently predict firms' future exposures to aggregate risk, even after controlling for standard firm characteristics.}
+	\webfull{We extract information from 10-K risk disclosures: topic models measure what is discussed,
+and context models measure how it is discussed. We find that both contain significant
+predictive information about future aggregate risk exposures, even controlling for
+(structured) firm characteristics, and that this information is both economically valuable
+and statistically distinct. We present evidence that management's discussion helps to
+predict some future corporate actions, which in turn can alter the firm's exposure to
+aggregate risk.}
+	\webtags{asset-pricing,equity,text-data}
+	}
+	
+\item{\samepage
+	\href{https://ssrn.com/abstract=4343101}{``Dogs and Cats Living Together: A Defense of Cash-Flow Predictability''}
+	\webid{dogs-cats-2023}
+	\webauthors{Pruitt, Seth}
+	\webinstitution{Arizona State University}
+	\weblinks{SSRN::https://ssrn.com/abstract=4343101}
+	\webshort{Aggregate dividend-price ratios robustly forecast both cash flows and returns, implying that both cash-flow and discount-rate expectations significantly drive stock prices.}
+	\webfull{The dividend-price present-value identity includes buybacks and issuance, from an
+aggregate perspective. Aggregate dividend-price ratios forecast buybacks and issuance,
+as well as returns, in the data. An alternative aggregate ratio, combining dividends
+and buybacks, also forecasts cash flows and returns. The long-run variance decomposition
+of either value ratio says that both cash-flow and discount-rate expectations
+significantly drive stock prices.}
+	\webtags{asset-pricing,equity,macroeconomics}
+	}
+	
+\item{\samepage
+    \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3975077}{``The Cost of ESG Investing''} {(with \href{\lauraweb}{L. Lindsey} and \href{\chrisweb}{C. Schiller})} %{R\&R at \textbf{\emph{Journal of Financial Economics}}}
+    \\ \href{https://rady.ucsd.edu/centers/pcam/research/}{2022 Pacific Center for Asset Management research grant}
+    \\ \href{https://icpmnetwork.com/company/roster/companyRosterDetails.html?companyId=20215&companyRosterId=30}{2022 International Centre for Pension Management Research Award (First Prize)}
+    \webid{esg-pricing}
+	\webauthors{Lindsey, Laura and Pruitt, Seth and Schiller, Christoph}
+	\webinstitution{Arizona State University and Ohio State University}
+    \weblinks{SSRN::https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3975077}
+    \webshort{ESG characteristics do not earn alpha or define new risk factors, but do explain variation in firms' conditional exposures to existing aggregate risks.}
+    \webfull{We evaluate ESG investing through the lens of conditional asset pricing. We find that
+ESG characteristics do not define a new priced factor or deliver alpha, but they do
+explain variation in firms' exposure to existing aggregate risks---particularly with
+respect to value. These conditional beta effects differ across ESG data providers,
+revealing an important economic dimension of ESG disagreement---even among positively
+correlated scores---helping to reconcile conflicting findings on the ``greenium'' in the
+literature. Finally, we show that negative ESG screening can improve a portfolio's
+ESG profile with little impact on risk-adjusted returns.}
+    \webtags{asset-pricing,equity,esg}
+    \webnotes{Coverage: \href{https://www.institutionalinvestor.com/article/b1vsfy9wv4bxwz/ESG-Investing-Poses-No-Significant-Cost-to-Investors}{Institutional Investor}}
+    }
+    
+\item{\samepage
+    \href{https://ssrn.com/abstract=2983919}{``Instrumented Principal Component Analysis''} {(with \href{\bryanweb}{B. Kelly} and \href{\yinanweb}{Y. Su})}\\ {R\&R, \emph{Quantitative Economics}}
+    \webid{ipca}
+	\webauthors{Kelly, Bryan T. and Pruitt, Seth and Su, Yinan}
+	\webinstitution{Yale University, Arizona State University, and Johns Hopkins University}
+    \webshort{IPCA is a latent factor model that uses observable characteristics as instruments for time-varying loadings, consistently estimating factors and their economic determinants from large panels.}
+    \webfull{We propose a new approach of latent factor analysis that, in addition to the main
+panel of interest, introduces other relevant data that serve as instruments for dynamic
+factor loadings. The method, called IPCA, provides a parsimonious means of incorporating
+vast conditioning information into factor model estimates. This improves the efficiency
+of estimates for the latent factors and their loadings, and helps to ascertain the
+economic relationships among factors and individuals via the observable instruments.
+The estimation is fast to calculate and accommodates unbalanced panels. We show
+consistency and asymptotic normality under general panel data generating processes.
+We demonstrate the advantages of IPCA in simulated data and in applications to equity
+asset pricing and international macroeconomics.}
+    \weblinks{SSRN::https://ssrn.com/abstract=2983919|Example MATLAB code::https://www.dropbox.com/sh/iw4esnml1ech355/AAAcc3w1TgIMDEqxhCLJg5Rxa?dl=0|Python code (Pruitt)::ipca.py|Python code (contributed)::ipca_public.py}
+    \webtags{asset-pricing,factor-models,econometrics,equity}
+    }
+\end{list}
+
+%\newpage
+
+
+\section{\href{http://www.sethpruitt.net/research\#refereedarticles}{{\sc\small Refereed\\Articles}}\\ \vspace{10pt}\href{https://www.dropbox.com/s/j6bzap526tgyje0/pruitt_bib.bib?dl=0}{.bib file}}
+\begin{itemize}{}{\leftmargin=1em}
+\setlength{\itemsep}{0pt}
+\setlength{\itemindent}{-18pt}
+
+\item[\underline{2023} 12.]{\samepage
+	\href{https://onlinelibrary.wiley.com/doi/10.1111/jofi.13233}{``Modeling Corporate Bond Returns''}\\
+    \textbf{\emph{Journal of Finance}}, August 2023, 78(4): 1967-2008 \\
+    {(with \href{\bryanweb}{B. Kelly} and D. Palhares)}
+    \webid{modeling-corp-bond}
+	\webauthors{Kelly, Bryan T. and Palhares, Diogo and Pruitt, Seth}
+    \webshort{A conditional five-factor model for corporate bond returns dramatically outperforms prior models and recommends systematic bond portfolios that beat leading credit strategies.}
+    \webfull{We propose a conditional factor model for corporate bond returns with five factors and
+time-varying factor loadings. We have three main empirical findings. First, our factor
+model excels in describing the risks and returns of corporate bonds, improving over
+previously proposed models in the literature by a large margin. Second, our benchmark
+model recommends a systematic bond investment portfolio that significantly outperforms
+leading corporate credit investment strategies. Third, we find closer integration
+between debt and equity markets than found in prior literature.}
+    \weblinks{SSRN::https://ssrn.com/abstract=3720789|Code and Data::https://www.dropbox.com/sh/4yu0xsopnnre571/AAAieXICkt2_iaoWEwNBkXfEa?dl=0|Faculti interview::https://faculti.net/modeling-corporate-bond-returns/}
+    \webtags{asset-pricing,debt,factor-models}
+    \webnotes{For publicly available data see \href{https://ssrn.com/abstract=4069478}{Reconciling TRACE Bond Returns}.}
+    }
+    
+\item[\underline{2021} 11.]{\samepage
+    \href{https://doi.org/10.1016/j.jfineco.2020.06.024}{``Understanding Momentum and Reversal''} \\
+    \textbf{\emph{Journal of Financial Economics}}, June 2021, 140(3): 726-743 \\
+    {(with \href{\bryanweb}{B. Kelly} and \href{\tobyweb}{T. Moskowitz})}
+    \webid{understanding-momentum}
+	\webauthors{Kelly, Bryan T. and Moskowitz, Tobias and Pruitt, Seth}
+    \webshort{Momentum and long-term reversal reflect time-varying risk compensation, as captured by a conditional factor model in which loadings depend on observable firm characteristics.}
+    \webfull{Stock momentum, long-term reversal, and other past return characteristics that predict
+future returns also predict future realized betas, suggesting these characteristics
+capture time-varying risk compensation. We formalize this argument with a conditional
+factor pricing model. Using instrumented principal components analysis, we estimate
+latent factors with time-varying factor loadings that depend on observable firm
+characteristics. We show that factor loadings vary significantly over time, even at
+short horizons over which the momentum phenomenon operates (one year), and that this
+variation captures reliable conditional risk premia missed by other factor models
+commonly used in the literature. Our estimates of conditional risk exposure can explain
+a sizeable fraction of momentum and long-term reversal returns and can be used to
+generate even stronger return predictions.}
+    \weblinks{SSRN::https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3610814|Code and Data::https://www.dropbox.com/sh/d1g2449o75siwqv/AACuryXLJnw9xhWJ2SDDvVS-a?dl=0}
+    \webtags{asset-pricing,equity,factor-models}
+    }
+    
+\item[\underline{2020} 10.]{\samepage
+    \href{https://www.aeaweb.org/articles?id=10.1257/aeri.20190096&&from=f}{``Earnings Risk in the Household: Evidence from Millions of U.S. Tax Returns''}\\
+    \textbf{\emph{American Economic Review: Insights}}, June 2020, 2(2): 237-254 \\
+    {(with \href{\nickweb}{N. Turner})}
+    \webid{earnings-risk}
+	\webauthors{Pruitt, Seth and Turner, Nicholas}
+    \webshort{Households effectively insure against much of the earnings risk facing primary earners, facing roughly half the countercyclical risk increase experienced by males alone.}
+    \webfull{Using detailed IRS administrative data on millions of households, we find that
+households effectively insure against much of the risk facing primary earners. We
+show that households face less risk than males alone, and households face roughly
+half the countercyclical risk increase. As a result of these risk differences,
+household certainty equivalent earnings are 19\% higher than for males alone, and
+household certainty equivalent earnings fall by about half as much during recessions.
+To facilitate related research, we make available the aggregated data used in our
+analysis.}
+    \weblinks{SSRN::https://ssrn.com/abstract=3107794|Code and Data::https://www.dropbox.com/s/50ekqg29e57tsxh/PruittTurner_AERI_Code_and_Data.zip?dl=0}
+    \webtags{labor,macroeconomics}
+    }
+    
+\item[\underline{2019} 9.]{\samepage
+    \href{https://doi.org/10.1016/j.jfineco.2019.05.001}{``Characteristics are Covariances: A Unified Model of Risk and Return''}\\
+    \textbf{\emph{Journal of Financial Economics}}, December 2019, 134(3): 501-524 \\
+    \textit{lead article} {(with \href{\bryanweb}{B. Kelly} and \href{\yinanweb}{Y. Su})}
+    \\ \href{https://www.jfinec.com/fama-dfa-prize}{Winner of the 2019 Best Paper in JFE, Fama/DFA Prize (First Place)}
+    \\ \href{https://marriottschool.byu.edu/event/redrock2018/home}{Winner of 2018 Best Paper, Red Rocks Finance Conference}
+    \webid{chars-are-covs}
+	\webauthors{Kelly, Bryan T. and Pruitt, Seth and Su, Yinan}
+    \webshort{IPCA explains the cross section of returns with five latent factors, finding that only 10 characteristics drive nearly all of the model's accuracy with anomaly intercepts statistically indistinguishable from zero.}
+    \webfull{We propose a new modeling approach for the cross section of returns. Our method,
+Instrumented Principal Component Analysis (IPCA), allows for latent factors and
+time-varying loadings by introducing observable characteristics that instrument for
+the unobservable dynamic loadings. If the characteristics/expected return relationship
+is driven by compensation for exposure to latent risk factors, IPCA will identify the
+corresponding latent factors. If no such factors exist, IPCA infers that the
+characteristic effect is compensation without risk and allocates it to an ``anomaly''
+intercept. Studying returns and characteristics at the stock level, we find that five
+IPCA factors explain the cross section of average returns significantly more accurately
+than existing factor models and produce characteristic-associated anomaly intercepts
+that are small and statistically insignificant. Furthermore, among a large collection
+of characteristics explored in the literature, only 10 are statistically significant
+at the 1\% level in the IPCA specification and are responsible for nearly 100\% of the
+model's accuracy.}
+    \weblinks{SSRN::https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3032013|Code and Data::https://www.dropbox.com/sh/sykn8aac1e2s6ry/AAAsGmD_qKRqDpOQhRAyWir_a?dl=0|Corrigendum::corrigendum.pdf}
+    \webtags{asset-pricing,equity,factor-models}
+    }
+    
+\item[\underline{2018} 8.]{\samepage
+    \href{https://doi.org/10.1017/S0022109017000898}{``The Liquidity Effects of Official Bond Market Intervention''}\\
+    \textbf{\emph{Journal of Financial and Quantitative Analysis}}, Feb 2018, 53(1): 243-268.\\
+    {(with \href{\michielweb}{M. De Pooter} and R. Martin)}
+    \webid{liquidity-effects}
+	\webauthors{De Pooter, Michiel and Martin, Robert F. and Pruitt, Seth}
+    \webshort{ECB purchases under the Securities Markets Programme caused robust and lasting reductions in sovereign bond liquidity premia, consistent with a search-based asset pricing model.}
+    \webfull{To ``ensure depth and liquidity,'' the European Central Bank intervened in sovereign
+debt markets through its Securities Markets Programme (SMP), providing a unique
+opportunity to estimate the effects of large-scale asset purchases on sovereign bond
+liquidity premia. From reduced-form estimates, we find robust, economically significant
+impact and lasting reductions in sovereign bonds' liquidity premia in response to
+official purchases. We develop a search-based asset-pricing model to understand our
+empirical results. The theory implies that bond liquidity premia fall in response to
+both official purchases and rising sovereign default probabilities, as seen in the data.}
+    \weblinks{SSRN::http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2143326}
+    \webtags{debt,monetary-policy,macroeconomics}
+    }
+    
+\item[\underline{2017} 7.]{\samepage
+    \href{http://onlinelibrary.wiley.com/doi/10.1111/jmcb.12391/full}{``Estimating Monetary Policy Rules When Interest Rates Are Stuck at Zero''}\\
+    \textbf{\emph{Journal of Money, Credit and Banking}}, June 2017, 49(4): 585-602.\\
+    \textit{lead article} {(with \href{\jinillweb}{J. Kim})}
+    \webid{monetary-policy-zlb}
+	\webauthors{Kim, Jinill and Pruitt, Seth}
+    \webshort{Using forecaster surveys to sidestep the zero lower bound censoring problem, we find that after the Global Financial Crisis the Fed's perceived inflation response weakened while its unemployment response strengthened.}
+    \webfull{Did the Federal Reserve's response to economic fundamentals change with the onset of
+the Global Financial Crisis? Estimation of a monetary policy rule to answer this
+question faces a censoring problem since the interest rate target has been set at the
+zero lower bound since late 2008. Surveys by forecasters allow us to sidestep the
+problem and to use conventional regressions and break tests. We find that, in the
+opinion of forecasters, the Fed's inflation response has decreased and the unemployment
+response has increased, which suggests that the Federal Reserve's commitment to stable
+inflation has become weaker in the eyes of the professional forecasters.}
+    \weblinks{SSRN::http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2312821|Code and Data::JMCB_Code_and_Data.zip}
+    \webtags{macroeconomics,monetary-policy,state-space}
+    }
+    
+\item[\underline{2016} 6.]{\samepage
+    \href{http://dx.doi.org/10.1016/j.jfineco.2016.01.010}{``Systemic Risk and the Macroeconomy: An Empirical Evaluation''} \\
+    \textbf{\emph{Journal of Financial Economics}}, March 2016, 119(3): 457-471\\
+    \textit{lead article} {(with \href{\stefanoweb}{S. Giglio} and \href{\bryanweb}{B. Kelly})}
+    \\ \href{https://www.jfinec.com/fama-dfa-prize}{Winner of the 2016 Best Paper in JFE, Fama/DFA Prize (First Place)}
+    \\ \href{http://www.q-group.org/roger-f-murray-prize/}{Winner of the 2015 Roger F. Murray Q-Group Prize}
+    \webid{systemic-risk}
+	\webauthors{Giglio, Stefano and Kelly, Bryan T. and Pruitt, Seth}
+    \webshort{Changes in systemic risk measures skew the distribution of subsequent macroeconomic shocks, and dimension-reduction indexes constructed from many measures predict macroeconomic outcomes out of sample.}
+    \webfull{This article studies how systemic risk and financial market distress affect the
+distribution of shocks to real economic activity. We analyze how changes in 19
+different measures of systemic risk skew the distribution of subsequent shocks to
+industrial production and other macroeconomic variables in the US and Europe over
+several decades. We also propose dimension reduction estimators for constructing
+systemic risk indexes from the cross section of measures and demonstrate their
+success in predicting future macroeconomic shocks out of sample.}
+    \weblinks{SSRN::http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2158347|Data::GKPwebdata.zip|Code::GKPwebcode.zip}
+    \webtags{macroeconomics,asset-pricing,factor-models}
+    }
+    
+\item[\underline{2015} 5.]{\samepage
+    \href{http://dx.doi.org/10.1016/j.jeconom.2015.02.011}{``The Three-Pass Regression Filter: A New Approach to Forecasting with Many Predictors''}\\
+    \textbf{\emph{Journal of Econometrics}}, June 2015, 186(2): 294-316 \\
+    {(with \href{\bryanweb}{B. Kelly})}
+    \webid{three-pass}
+	\webauthors{Kelly, Bryan T. and Pruitt, Seth}
+    \webshort{The 3PRF forecasts a target series using many predictors by requiring only knowledge of the number of factors relevant to the target, regardless of the full factor space.}
+    \webfull{We forecast a single time series using many predictor variables with a new estimator
+called the three-pass regression filter (3PRF). It is calculated in closed form and
+conveniently represented as a set of ordinary least squares regressions. 3PRF forecasts
+are consistent for the infeasible best forecast when both the time dimension and cross
+section dimension become large. This requires specifying only the number of relevant
+factors driving the forecast target, regardless of the total number of common factors
+driving the cross section of predictors. The 3PRF is a constrained least squares
+estimator and reduces to partial least squares as a special case. Simulation evidence
+confirms the 3PRF's forecasting performance relative to alternatives. We explore two
+empirical applications: forecasting macroeconomic aggregates with a large panel of
+economic indices, and forecasting stock market returns with price-dividend ratios of
+stock portfolios.}
+    \weblinks{SSRN::http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1868703|Code::the3PRF.zip|Web Appendix::WebAppendix110620.pdf|Errata::KellyPruitt_JoE2015_errata.pdf}
+    \webtags{econometrics,factor-models,macroeconomics}
+    }
+\item[\underline{2013} 4.]{\samepage
+    \href{http://www.aeaweb.org/articles.php?doi=10.1257/aer.103.7.3022}{``The Demand for Youth: Explaining Age Differences in the Volatility of Hours''}\\
+    \textbf{\emph{American Economic Review}}, December 2013, 103(7): 3022-3044 \\
+    {(with \href{\nirweb}{N. Jaimovich} and \href{\henryweb}{H. Siu})}
+    \webid{demand-youth}
+	\webauthors{Jaimovich, Nir and Pruitt, Seth and Siu, Henry}
+    \webshort{Young workers face greater cyclical volatility in both hours and wages than prime-aged workers, which a model of labor demand differences---not supply differences---can explain.}
+    \webfull{Over the business cycle young workers experience much greater volatility of hours
+worked than prime-aged workers. This can arise from age differences in labor supply
+or labor demand characteristics. To distinguish between these, we document that, for
+young workers, both the cyclical volatilities of hours and wages are greater than
+those of the prime-aged. We argue that a general class of models featuring only
+age-specific labor supply differences cannot reconcile these facts. We then show that
+a simple model featuring labor demand differences can.}
+    \weblinks{Draft::demandyouth.pdf|Data and Code::https://www.aeaweb.org/aer/data/dec2013/20110792_data.zip}
+    \webtags{labor,macroeconomics}
+    }
+    
+\item[3.]\samepage
+    \href{https://doi.org/10.1111/jofi.12060}{``Market Expectations in the Cross Section of Present Values''}\\
+    \textbf{\emph{Journal of Finance}}, October 2013, 68(5): 1721-1756 \\
+    \textit{lead article} {(with \href{\bryanweb}{B. Kelly})}
+    \\ \href{https://www.aqr.com/About-Us/AQR-Insight-Award}{Winner of the 2012 AQR Insight Award First Prize}
+    \\ \href{http://www.q-group.org/recently-funded/#2011}{Awarded 2011 Q Group Research Grant}
+    \webid{market-expectations}
+	\webauthors{Kelly, Bryan T. and Pruitt, Seth}
+    \webshort{A single factor extracted from the cross section of book-to-market ratios forecasts aggregate stock market returns and cash flows out of sample with an annual R-squared as high as 13\%.}
+    \webfull{Returns and cash flow growth for the aggregate U.S. stock market are highly and
+robustly predictable. Using a single factor extracted from the cross section of
+book-to-market ratios, we find an out-of-sample return forecasting R-squared as high
+as 13\% at the annual frequency (0.9\% monthly). We document similar out-of-sample
+predictability for returns on value, size, momentum, and industry-sorted portfolios.
+We present a model linking aggregate market expectations to disaggregated valuation
+ratios in a dynamic latent factor system. We find that spreads in growth and value
+portfolios' exposures to economic shocks are key to identifying predictability and
+are consistent with duration-based theories of the value premium. Our findings
+suggest that discount rates are far less persistent, and their shocks far more
+volatile, than implied by leading asset pricing models.}
+    \weblinks{SSRN::http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1752543|Code::PublicCode_Original.zip|Data::PublicData_Original.zip}
+    \webtags{asset-pricing,equity,factor-models,macroeconomics}
+\item[\underline{2012} 2.]{\samepage
+    \href{http://onlinelibrary.wiley.com/doi/10.1111/j.1538-4616.2011.00490.x/abstract}{``Uncertainty over Models and Data: The Rise and Fall of American Inflation''}\\
+    \textbf{\emph{Journal of Money, Credit and Banking}}, Mar-Apr 2012, 44(2-3): 341-365\\
+    (solo-authored)
+    \webid{uncertainty-models}
+	\webauthors{Pruitt, Seth}
+    \webshort{Introducing data uncertainty into a model of a learning Federal Reserve makes the learning process more sluggish, explaining the rise and fall of U.S. inflation through a perceived Phillips curve trade-off.}
+    \webfull{Economic agents who are uncertain of their economic model learn, and this learning is
+sensitive to the presence of data uncertainty. I investigate this idea in a framework
+that successfully describes inflation as a learning Federal Reserve's optimal policy
+but fails to satisfactorily motivate these policy shifts. I modify the framework to
+account for data uncertainty: the learning process is made more sluggish by its
+presence. Consequently, the estimated model provides an explanation for the rise and
+fall in inflation: the concurrent rise and fall in the perceived Phillips curve
+trade-off between inflation and unemployment.}
+    \weblinks{Draft::umdrfai.pdf}
+    \webtags{macroeconomics,monetary-policy,state-space}
+    }
+    
+\item[\underline{2011} 1.]{\samepage
+    \href{http://www.aeaweb.org/articles.php?doi=10.1257/mac.3.3.1}{``Estimating the Market-Perceived Monetary Policy Rule''} \\
+    \textbf{\emph{American Economic Journal: Macroeconomics}}, July 2011, 3(3): 1-28 \\
+    \textit{lead article} {(with \href{\jimweb}{J. Hamilton} and {S. Borger})}
+    \webid{market-perceived}
+	\webauthors{Hamilton, James D. and Pruitt, Seth and Borger, Scott}
+    \webshort{Using macroeconomic news to identify the market-perceived Fed policy rule, we find that between 1994 and 2007 the output response vanished while the inflation response became more gradual but larger in long-run magnitude.}
+    \webfull{We introduce a novel method for estimating a monetary policy rule using macroeconomic
+news. We estimate directly the policy rule agents use to form their expectations by
+linking news' effects on forecasts of both economic conditions and monetary policy.
+Evidence between 1994 and 2007 indicates that the market-perceived Federal Reserve
+policy rule changed: the output response vanished, and the inflation response path
+became more gradual but larger in long-run magnitude. These response coefficient
+estimates are robust to measurement and theoretical issues with both potential output
+and the inflation target.}
+    \weblinks{Draft::mpmpr_draft.pdf|Web Appendix::http://www.aeaweb.org/aej/mac/app/2009-0151_app.pdf|Data and Code::http://www.aeaweb.org/aej/mac/data/2009-0151_data.zip}
+    \webtags{macroeconomics,monetary-policy,state-space}
+    }
+\end{itemize}
+
+%\newpage
+\section{\href{}{\sc\small Other\\ Articles}}
+\begin{list}{}{\leftmargin=1em}
+\setlength{\itemsep}{0pt}
+\setlength{\itemindent}{-18pt}
+\item{\samepage
+    \href{https://www.nowpublishers.com/article/Details/CFR-0114}{``Dissecting Market Expectations in the Cross-Section of Book-to-Market Ratios: A Comment''}\\
+    \textbf{\emph{Critical Finance Review}}, May 2022, 11(2): 375-381 \\
+    {(with \href{\bryanweb}{B. Kelly})}
+    \webid{cfr-comment}
+	\webauthors{Kelly, Bryan T. and Pruitt, Seth}
+    \webshort{We comment on the methodology for extracting market expectations from the cross section of book-to-market ratios.}
+    \webtags{asset-pricing,equity,factor-models}
+    }
+\end{list}
+
+
+\section{\href{http://www.sethpruitt.net/research\#olderworkingpapers}{\sc\small Older \\ Working\\ Papers}}
+\begin{list}{}{\leftmargin=1em}
+\setlength{\itemsep}{0pt}
+\setlength{\itemindent}{-18pt}
+\item{\samepage
+    \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4069478}{``Reconciling TRACE bond returns''} {(with \href{\bryanweb}{B. Kelly})}
+    \webid{reconciling-trace}
+	\webauthors{Kelly, Bryan T. and Pruitt, Seth}
+	\webinstitution{Yale University and Arizona State University}
+    \webshort{TRACE bond returns differ meaningfully from ICE data used by practitioners, though the core results of Kelly et al. (2023) are robust to using WRDS/TRACE data instead.}
+    \webfull{TRACE bond returns are meaningfully different from ICE bond return data used by banks,
+asset managers, and hedge funds. The core results of Kelly et al. (2023) are robust to
+instead using WRDS/TRACE data.}
+    \weblinks{SSRN::https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4069478|Publicly available data::https://www.dropbox.com/sh/16uqp1ab73gxqnn/AABm0Da-0ezo9TgR0_g8bEc-a?dl=0}
+    \webtags{debt}
+    }
+\item\samepage
+    \href{http://www.federalreserve.gov/pubs/ifdp/2009/968/ifdp968.pdf}{``Markup Variation and Endogenous Fluctuations in the Price of Investment Goods''} {(with M. Floetotto and \href{\nirweb}{N. Jaimovich})}
+    \webid{markup-variation-2009}
+	\webauthors{Floetotto, Max and Jaimovich, Nir and Pruitt, Seth}
+	\webinstitution{Stanford University and Federal Reserve Board}
+    \weblinks{Paper::http://www.federalreserve.gov/pubs/ifdp/2009/968/ifdp968.pdf}
+    \webtags{macroeconomics}
+    \webfull{The two sector model presented in this note suggests a simple structural decomposition of movements in the price of investment goods into exogenous and endogenous sources. The endogenous fluctuations arise in the presence of countercyclical markups which vary differently across the consumption and investment sectors. In turn, the movements in the markups are due to endogenous procyclical net business formation. The model, while being consistent with the countercyclicality of the price of investment goods, suggests that about a quarter of the movement in the price series can be attributed to this endogenous mechanism.}
+    \webshort{Investment-good relative prices can fluctuate due to endogenous markups, not only technological shocks}
+    
+    
+\item\samepage
+    \href{http://papers.ssrn.com/abstract=2080107}{``The Pseudo-Information Filter''}
+    \webid{pseudo-info-filter-2009}
+	\webauthors{Pruitt, Seth}
+	\webinstitution{Federal Reserve Board}
+    \weblinks{SSRN::http://papers.ssrn.com/abstract=2080107}
+    \webshort{The pseudo-information filter solves linear state-space models with significant computational advantages over the Kalman filter when data are high-dimensional.}
+    \webfull{The pseudo-information filter is defined in order to solve a linear state-space model.
+The filter offers significant computational advantages over the Kalman filter when the
+data are high-dimensional.}
+    \webtags{state-space,econometrics}
+\end{list}
+
+\section{\sc\small Teaching Experience}
+Empirical Asset Pricing (PhD), Financial Econometrics (MS), Managerial Finance (BS), Macroeconometrics (MA), Macroeconomic Principles (BA) 
+
+\section{\sc\small Honors}
+\href{https://icpmnetwork.com/site/research/call-for-research}{2022 International Centre for Pension Management Research Award (First Place)}\\
+2022-present WPC Dean's Excellence Summer Research Grant\\
+\href{https://rady.ucsd.edu/centers/pcam/research/}{2022 Pacific Center for Asset Management Research Award}\\
+\href{https://www.jfinec.com/fama-dfa-prize}{2019 Best Paper in JFE, Fama/DFA Prize (First Place)}\\
+2019-2020 WPC Dean's List for Teaching Impact \\
+\href{https://marriottschool.byu.edu/event/redrock2018/home}{2018 Best Paper, Red Rocks Finance Conference}\\
+\href{https://www.jfinec.com/fama-dfa-prize}{2016 Best Paper in JFE, Fama/DFA Prize (First Place)}\\
+\href{https://www.q-group.org/Roger-F.Murray-Prize}{2015 Q-Group Roger F. Murray (Third Prize)}\\
+\href{https://www.aqr.com/About-Us/AQR-Insight-Award/2012/First-Prize}{2012 AQR Insight Award (First Prize)}\\
+2011 Q Group research grant\\
+2006 Dean's Travel Grant, UCSD\\
+2006 Teaching Assistance Excellence Award, UCSD\\
+2003--2008 Economics Department Tuition Grant, UCSD\\
+1998--2002 National Merit Scholar, University of Arizona \\
+1998--2002 President's Excellence Award, University of Arizona\\
+1999--2002 Arizona Community Helen Dyar King Scholarship\\
+1998--2002 Dean's List, University of Arizona\\
+2000 NSEP Study Abroad Grant, Bogazici Universitesi, Istanbul\\
+1998 President's Achievement Award, University of Arizona
+
+\section{\sc\small Seminars and Conferences}
+\underline{2026} AFA Annual Meeting (Philadelpha)$^{p}$\\
+\underline{2025} LSU Mardi Gras Conference$^{d}$; Yale (SOM)$^{p}$, Notre Dame Emerging Voices$^{d}$; WFA (Snowbird)$^{d}$; NBER SI, EFWW$^{a}$; NBER Fall AP$^{a}$; FRA Annual Conference (Las Vegas)$^{a}$\\
+\underline{2024} MFA Annual Meeting (Chicago)$^{cp}$; UC Riverside (Econ)$^{p_v}$; SFS Cavalcade (Atlanta)$^{p}$; Bocconi - BAFFI - CEPR Conference on Asset Pricing (invited paper)$^{p}$; EIEF (Rome)$^{p}$;  Michigan Ross $36^{th}$ Mitsui Symposium (invited paper)$^{p}$; UW Foster Summer Conference$^{d}$; EFA (Bratislava)$^{cd}$; UBC (Sauder)$^{p}$; Cheung Kong GSB$^{p}$; Tsinghua (PBC)$^{p}$;\\
+\underline{2023} AFA Annual Meeting (New Orleans)$^{c_vd_v}$; KCFR$^{p}$; NBER AP Spring (Chicago); Kentucky Bourbon Conference$^{d}$; SFS Cavalcade (Austin)$^{ad}$; WFA Annual Meeting (San Francisco)$^d$; EFA Annual Meeting (Amsterdam)$^{pd}$; Colorado State$^{p}$; Washington University (Olin)$^{p}$; FRA Annual Conference (Las Vegas)\\
+\underline{2022} AFA Annual Meeting, President's Invited Session$^{a_v}$, PCAM Spring$^{a_v}$, Villanova MARC$^{a_v}$, TAMU Young Scholars Conference$^{d}$, Georgetown (McDonough)$^{p}$, Kentucky Bourbon Conference$^{p}$; WFA Annual Meeting (Portland)$^{d}$; EFA Annual Meeting (Barcelona)$^{pd}$; PCAM Fall$^{p}$; Hong Kong Polytechnic$^{p_v}$; Singapore Management University$^{p}$; Nanyang Technological University$^{p}$; National University of Singapore$^{p}$; UMass Amherst (Isenberg)$^{p}$; Rice (Jones)$^{p}$\\
+\underline{2021} SoFiE seminar$^{p_v}$; Villanova MARC$^{d_v}$; WFA Annual Meeting$^{p_v}$; CICF$^{d_v}$; Colorado (Leeds)$^{p}$; FRA Annual Conference (Las Vegas)$^{d}$\\
+\underline{2020} Kentucky$^{p}$; BI/Stockholm Asset Pricing and Financial Econometrics$^{d_v}$; SoFiE seminar$^{d_v}$\\
+\underline{2019} Vanderbilt$^{p}$; UBC WFC$^{d}$; MFA Annual Meeting (Chicago)$^{d}$; Duke (Econ)$^{p}$; Bundesbank$^{p}$; University of Geneva$^{p}$; Toulouse Financial Econometrics Conference, Invited Paper$^{p}$; UCSD (Rady)$^{p}$; FRA Annual Conference (Las Vegas)$^{p}$; Montreal Econometrics Seminar (University of Montreal)$^{p}$;
+\\
+\underline{2018} Utah Winter Finance Conference$^a$; NBER LTAM Meeting (New York)$^p$; Ben Graham Centre's Symposium on Intelligent Investing (Toronto)$^d$; WFA Annual Meeting (Coronado)$^{pd}$; NBER SI, CRIW$^p$; Red Rocks Finance Conference$^p$; New Methods in the Cross Section of Returns (Chicago)$^d$\\
+\underline{2017} SoFiE Annual Conference (New York)$^a$; NBER-NSF Time Series Conference (Northwestern)$^p$; FR Bank of San Francisco$^p$; FRA Annual Conference (Las Vegas)$^p$\\
+\underline{2016} FRA Annual Conference (Las Vegas)$^{d}$\\
+\underline{2015} EFA Annual Meeting (Vienna)$^{cd}$; Minnesota (Carlson)$^p$; FR Bank of St Louis Econometrics Workshop, Invited Paper$^p$\\
+\underline{2014} AEA Annual Meeting (Philadelphia)$^p$; HEC Montreal Applied Financial Time Series Conference, Invited Paper$^p$; Arizona State (WP Carey)$^p$; Yale (SoM)$^p$; Arizona (Eller)$^p$; FRA Annual Conference (Las Vegas)\\
+\underline{2013} AFA Annual Meeting (San Diego)$^p$; AEA Annual Meeting (San Diego)$^p$; FR Bank of San Francisco$^p$; Maryland (Smith)$^p$; FR Bank of New York$^p$; CIRANO Finance Workshop, Invited Paper$^p$; WFA Annual Meeting (Tahoe)$^{pd}$; NBER SI, EFWW$^p$; NBER-NSF Time Series Conference, Plenary Session (DC)$^p$; SoFiE Large Scale Factor Models in Finance Conference (Lugano)$^p$\\
+\underline{2012} FR Bank of St Louis Econometrics Workshop, Invited Paper$^p$; CIREQ Time Series Conference, Invited Paper$^p$; $32^{nd}$ Annual Intl Symposium on Forecasting, Invited Paper (Boston)$^p$; SoFiE Annual Conference (Oxford)$^p$; Joint Statistical Meetings, Invited Paper (San Diego)$^p$; FR Bank of San Francisco$^p$; Brandeis$^p$; FR Bank of Boston$^p$\\
+\underline{2011} SNDE Annual Symposium (DC)$^a$; Adam Smith Asset Pricing Conference (Oxford)$^a$; Norges Bank$^p$; North Am. ES Meetings (St Louis)$^p$; SoFiE Annual Conference (Chicago)$^p$; Western Economics Association Meetings (San Diego)$^p$; NBER SI, EFWW$^p$; NBER-NSF Time Series Conference (Michigan State)$^p$\\
+\underline{2010} George Washington (Econ)$^p$; SNDE Annual Symposium (Novara)$^p$; FR Board of Governors$^p$; UCSD (Rady)$^p$; Northwestern (Kellogg)$^p$\\
+\underline{2009} FR Board of Governors$^p$; Bundesbank Forecasting and Monetary Policy Conference (Berlin)$^p$; Midwest Macro Meetings (Indiana)$^p$; North Am. ES Meetings (Boston)$^p$; NBER Monetary Group Fall Meeting (Boston)$^p$; FRS Macroeconomics Conference (Baltimore)$^p$\\
+\underline{2008} AEA Annual Meeting (New Orleans); FR Bank of Philadelphia$^p$; Georgetown (Econ)$^p$; HEC Montreal (Econ)$^p$; Texas A\&M (Econ)$^p$; FR Board of Governors$^p$; Penn State (Econ)$^p$; FR Bank of Kansas City$^p$; UC Santa Cruz (Econ)$^p$; FR Bank of Atlanta$^p$; Macroeconomic Policy and Learning Conference (Cambridge)$^p$; FRS International Economics Conference (DC)$^p$\\
+{\footnotesize $^p$presentation, $^c$chair, $^d$discussion, $^a$co-author presented, $_v$virtual, *scheduled, }
+
+
+\section{\sc\small Professional Service}
+$\bullet$ Referee: \\
+American Economic Review (09x2,17);\\
+American Economic Review: Insights (19x2);\\
+American Economic Journal: Macroeconomics (19,20)\\
+American Economic Journal: Policy (18);\\
+Annals of Finance (25);\\
+B.E. Journal of Macroeconomics (09x2,10,18,19);\\
+Econometrica (13,14,15);\\
+Financial Analysts Journal (23x2,24x2);\\
+International Journal of Forecasting (11x3,18);\\
+International Journal of Central Banking (12);\\
+Journal of Applied Econometrics (12x2,13x3,15,19,20,22,23x2,24);\\
+Journal of Business and Economic Statistics (08,11,12x3,14,15,16x3,17x2,18,23);\\
+Journal of Banking and Finance (16,17,18x2,19x4,20x3,21,22,24);\\
+Journal of Corporate Finance (20);\\
+Journal of Econometrics (11,18,21x2,22,23x2);\\
+Journal of Economic Dynamics and Control (15,16,21);\\
+Journal of Empirical Finance (13,17);\\
+Journal of the European Economic Association (10,16,20,22);\\
+Journal of International Money and Finance (18);\\
+Journal of Finance (14x3,15x2,18x2,19x2,20x3,21x6,22x2,23x2,24x2,25);\\
+Journal of Financial Economics (17,19x2,20x5,21x6,22x2,24x3,25x3);\\
+Journal of Financial Econometrics (13,16,17,21);\\
+Journal of Financial and Quantitative Analysis (12,13,14,15,16,17x2,18,19x2,20,21,22x2,\\\phantom{Referee}23,24,25x2);\\
+Journal of Money, Credit and Banking (10,16,17);\\
+Journal of Monetary Economics (14);\\
+Macroeconomic Dynamics (09,15);\\
+Management Science (16x2,17x3,18x2,19x2,21,23,24);\\
+Quantitative Economics (21x2,25)\\
+Review of Asset Pricing Studies (18x2,19,20,21x2,22x2,23);\\
+Review of Economic Dynamics (10);\\
+Review of Economics and Statistics (12);\\
+Review of Finance (21,25);\\
+Review of Financial Studies (12,13,14x3,15x2,16x5,17x2,18x4,19x5,20x4,21x2,22x4,\\\phantom{Referee}23x4,24x3,25x2)\\
+\\
+$\bullet$ Program Committee:\\
+CFEA 2025\\
+MFA track chair 2024--present\\
+International Association for Applied Econometrics Annual Conference 2023--present\\
+ISB CAF Summer Conference 2023--present\\
+FRA 2022--present\\
+SoFiE Annual Conference 2022--present\\
+WFA 2021--present\\
+Kentucky Bourbon Conference 2019--present\\
+ASU Sonoran Winter Conference 2015--present\\
+FMA track chair 2024\\
+FMA Conference on Derivatives and Volatility, 2016--2023\\
+FIRN Annual Conference 2017--2019\\
+Michigan Mitsui Finance Symposium on Asset Pricing 2019\\
+MFA 2016\\
+SNDE Annual Symposium 2011--12\\
+\\
+$\bullet$ PhD Committee (with first placement):\\
+Tyler Beason (Virginia Tech)$^m$, Juhee Bae (Univ. of Glasgow)$^m$, Hamilton Galindo Gil (Cleveland State University)$^c$, Shuhao Ren (LSU)$^m$, Anthony (Xiangyu) Zhang (Central University of Finance and Economics, Beijing)$^m$\\
+{\footnotesize $^c$committee chair, $^m$committee member} 
+
+\section{\sc\small Internal Service}
+\underline{ASU}\\
+PhD Application Committee: 2014--2017, 2018--2023\\
+Faculty Recruiting Committee: 2014--2016, 2018--2020, 2021--present\\
+Faculty Senate: 2018--2019, 2021\\
+
+\section{\sc\small Other\\ External}
+Board of Directors, Treasurer: Amor Ministries
+
+\section{\sc\small Bio}
+Seth Pruitt is an Associate Professor in the Department of Finance at the W.P. Carey School of Business at Arizona State University Prior to this, he was Senior Economist at the Federal Reserve Board of Governors.  He received his PhD in Economics from the University of California, San Diego in 2008 . His research focuses on asset pricing, macroeconomics, and econometrics and has been published in leading journals such as \emph{American Economic Review, Journal of Finance, Journal of Financial and Quantitative Analysis,} and \emph{Journal of Financial Economics}. His awards include: 2019 Best Paper in JFE, Fama/DFA (First Prize); 2016 Best Paper in JFE, Fama/DFA (First Prize); 2012 AQR Insight Award (First Prize).
+
+
+\end{resume}
+\end{document}

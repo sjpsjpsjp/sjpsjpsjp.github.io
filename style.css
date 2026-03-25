@@ -378,6 +378,20 @@ h2.section-heading {
     margin-bottom: 10px;
 }
 
+.paper-meta {
+    font-size: 0.92em;
+    margin-bottom: 6px;
+}
+
+.meta-sep {
+    color: #bbb;
+}
+
+.paper-authors-inline {
+    color: var(--text-muted);
+    font-style: normal;
+}
+
 .paper-links {
     font-size: 0.85em;
     display: flex;
