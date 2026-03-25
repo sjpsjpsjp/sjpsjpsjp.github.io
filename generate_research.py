@@ -11,9 +11,10 @@ and writes a fresh research.html.
 import re, sys
 from pathlib import Path
 
-TEX_FILE  = Path('spcv.tex')
-HTML_FILE = Path('research.html')
-BIB_FILE  = Path('pruitt_bib.bib')
+TEX_FILE   = Path('spcv.tex')
+HTML_FILE  = Path('research.html')
+BIB_FILE   = Path('pruitt_bib.bib')
+INDEX_FILE = Path('index.html')
 
 JOURNAL_ABBREVS = {
     'Journal of Finance':                          'JF',
@@ -712,6 +713,44 @@ function toggleAbstract(el) {
 '''
 
 # ─────────────────────────────────────────────────────────────────────────────
+# BIO / INDEX.HTML
+# ─────────────────────────────────────────────────────────────────────────────
+
+def parse_bio(tex, macros):
+    """Extract the \\section Bio paragraph and convert to an HTML <p>."""
+    m = re.search(r'\\section\s*\{[^}]*Bio[^}]*\}(.*?)(?=\\section|\\end\{resume\})',
+                  tex, re.DOTALL)
+    if not m:
+        return ''
+    raw = m.group(1).strip()
+    # Collapse whitespace / newlines into single spaces
+    raw = re.sub(r'\s+', ' ', raw)
+    html = latex_to_html(raw, macros)
+    # Wrap journals after "such as" in "the" if missing — normalise leading "the"
+    # (the tex has no "the" before journals; index.html had "such as the")
+    html = re.sub(r'such as (<em>)', r'such as the \1', html)
+    return f'            <p>{html}</p>'
+
+def update_index_bio(bio_html):
+    """Replace the <!-- bio-start/end --> block in index.html with new bio_html."""
+    if not INDEX_FILE.exists():
+        print(f"Warning: {INDEX_FILE} not found — skipping bio update.", file=sys.stderr)
+        return
+    index = INDEX_FILE.read_text(encoding='utf-8')
+    new_block = f'            <!-- bio-start -->\n{bio_html}\n            <!-- bio-end -->'
+    index_new = re.sub(
+        r'            <!-- bio-start -->.*?<!-- bio-end -->',
+        new_block,
+        index,
+        flags=re.DOTALL,
+    )
+    if index_new == index:
+        print("Warning: bio markers not found in index.html — no update made.", file=sys.stderr)
+        return
+    INDEX_FILE.write_text(index_new, encoding='utf-8')
+    print(f"Updated bio in {INDEX_FILE}")
+
+# ─────────────────────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -743,6 +782,12 @@ def main():
     bib = generate_bib(all_papers)
     BIB_FILE.write_text(bib, encoding='utf-8')
     print(f"Wrote {BIB_FILE}   ({len(bib):,} bytes)")
+
+    bio_html = parse_bio(tex, macros)
+    if bio_html:
+        update_index_bio(bio_html)
+    else:
+        print("Warning: Bio section not found in spcv.tex.", file=sys.stderr)
 
 if __name__ == '__main__':
     main()

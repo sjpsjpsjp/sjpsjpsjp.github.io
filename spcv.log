@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.3)  25 MAR 2026 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.3)  25 MAR 2026 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -278,7 +278,7 @@ Package color Info: Driver file: pdftex.def on input line 149.
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 )
 (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Option `colorlinks' set `true' on input line 42.
+Package hyperref Info: Option `colorlinks' set `true' on input line 43.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
@@ -290,29 +290,29 @@ LaTeX Warning: Unused global option(s):
     [12pt].
 
 No file spcv.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
 \providecommand\hyper@newdestlabel[2]{}
-Package hyperref Info: Link coloring ON on input line 81.
+Package hyperref Info: Link coloring ON on input line 82.
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count299
@@ -328,33 +328,33 @@ Package hyperref Info: Link coloring ON on input line 81.
 \everyMPtoPDFconversion=\toks27
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 87.
+(Font)              <12> on input line 88.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 87.
+(Font)              <8> on input line 88.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 87.
+(Font)              <6> on input line 88.
 
-Overfull \hbox (18.0pt too wide) in paragraph at lines 87--95
+Overfull \hbox (18.0pt too wide) in paragraph at lines 88--96
 [][] 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 139.
+Package hyperref Warning: Suppressing link with empty target on input line 140.
 
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 147.
+Package hyperref Warning: Suppressing link with empty target on input line 148.
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--208
+Underfull \hbox (badness 10000) in paragraph at lines 190--209
 
  []
 
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (11.63406pt too wide) in paragraph at lines 326--343
+Overfull \hbox (11.63406pt too wide) in paragraph at lines 327--344
 \OT1/cmr/bx/it/12 Journal of Fi-nan-cial and Quan-ti-ta-tive Anal-y-sis\OT1/cmr
 /m/n/12 , Feb 2018, 53(1): 243-268. 
  []
@@ -369,7 +369,7 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 
 [2]
 
-Package hyperref Warning: Suppressing link with empty target on input line 485.
+Package hyperref Warning: Suppressing link with empty target on input line 486.
 
 
 
@@ -382,59 +382,59 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 
 [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 587.
+(Font)              <7> on input line 588.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 587.
+(Font)              <5> on input line 588.
 
-Overfull \hbox (41.97154pt too wide) in paragraph at lines 567--588
+Overfull \hbox (41.97154pt too wide) in paragraph at lines 568--589
 \OT1/cmr/m/n/12 Bour-bon Conference$[]$; WFA An-nual Meet-ing (Portland)$[]$; E
 FA An-nual Meet-ing (Barcelona)$[]$;
  []
 
 
-Overfull \hbox (0.20927pt too wide) in paragraph at lines 567--588
+Overfull \hbox (0.20927pt too wide) in paragraph at lines 568--589
 \OT1/cmr/m/n/12 PCAM Fall$[]$; Hong Kong Polytechnic$[]$; Sin-ga-pore Man-age-m
 ent University$[]$; Nanyang
  []
 
 
-Overfull \hbox (21.59042pt too wide) in paragraph at lines 567--588
+Overfull \hbox (21.59042pt too wide) in paragraph at lines 568--589
 \OT1/cmr/m/n/12 Tech-no-log-i-cal University$[]$; Na-tional Uni-ver-sity of Sin
 gapore$[]$; UMass Amherst (Isenberg)$[]$;
  []
 
 
-Overfull \hbox (2.02702pt too wide) in paragraph at lines 567--588
+Overfull \hbox (2.02702pt too wide) in paragraph at lines 568--589
 []$ \OT1/cmr/m/n/12 SoFiE seminar$[]$; Vil-lanova MARC$[]$; WFA An-nual Meeting
 $[]$; CICF$[]$; Col-orado
  []
 
 
-Overfull \hbox (8.1511pt too wide) in paragraph at lines 567--588
+Overfull \hbox (8.1511pt too wide) in paragraph at lines 568--589
 \OT1/cmr/m/n/12 Gra-ham Cen-tre's Sym-po-sium on In-tel-li-gent In-vest-ing (To
 ronto)$[]$; WFA An-nual Meet-ing
  []
 
 
-Overfull \hbox (15.15208pt too wide) in paragraph at lines 567--588
+Overfull \hbox (15.15208pt too wide) in paragraph at lines 568--589
 \OT1/cmr/m/n/12 In-vited Pa-per (Boston)$[]$; SoFiE An-nual Con-fer-ence (Oxfor
 d)$[]$; Joint Sta-tis-ti-cal Meet-ings,
  []
 
 
-Overfull \hbox (16.32939pt too wide) in paragraph at lines 567--588
+Overfull \hbox (16.32939pt too wide) in paragraph at lines 568--589
 []$ \OT1/cmr/m/n/12 SNDE An-nual Sym-po-sium (DC)$[]$; Adam Smith As-set Pric-i
 ng Con-fer-ence (Oxford)$[]$;
  []
 
 
-Overfull \hbox (11.22818pt too wide) in paragraph at lines 567--588
+Overfull \hbox (11.22818pt too wide) in paragraph at lines 568--589
 \OT1/cmr/m/n/12 (Chicago)$[]$; West-ern Eco-nomics As-so-ci-a-tion Meet-ings (S
 an Diego)$[]$; NBER SI, EFWW$[]$;
  []
 
 
-Overfull \hbox (11.16731pt too wide) in paragraph at lines 567--588
+Overfull \hbox (11.16731pt too wide) in paragraph at lines 568--589
 []$ \OT1/cmr/m/n/12 FR Board of Governors$[]$; Bun-des-bank Fore-cast-ing and M
 on-e-tary Pol-icy Con-fer-ence
  []
@@ -448,18 +448,18 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.35002pt}.
 
 [4]
-Overfull \hbox (10.7129pt too wide) in paragraph at lines 591--646
+Overfull \hbox (10.7129pt too wide) in paragraph at lines 592--647
 \OT1/cmr/m/n/12 Journal of Fi-nan-cial and Quan-ti-ta-tive Anal-y-sis (12,13,14
 ,15,16,17x2,18,19x2,20,21,22x2, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--646
+Underfull \hbox (badness 10000) in paragraph at lines 592--647
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--646
+Underfull \hbox (badness 10000) in paragraph at lines 592--647
 
  []
 
@@ -472,7 +472,7 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.35002pt}.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 648--652
+Underfull \hbox (badness 10000) in paragraph at lines 649--653
 
  []
 
@@ -495,10 +495,10 @@ Package fancyhdr Warning: \headheight is too small (0.0pt):
 
 [7] ) 
 Here is how much of TeX's memory you used:
- 9546 strings out of 476025
- 150941 string characters out of 5790017
+ 9547 strings out of 476025
+ 150954 string characters out of 5790017
  1867388 words of memory out of 5000000
- 29886 multiletter control sequences out of 15000+600000
+ 29887 multiletter control sequences out of 15000+600000
  518372 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,76p,1042b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -514,10 +514,10 @@ sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on spcv.pdf (7 pages, 173407 bytes).
+Output written on spcv.pdf (7 pages, 173519 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
+ 205 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  8 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
