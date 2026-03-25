@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
 """
-generate_research.py — Build research.html from spcv.tex.
+generate_research.py — Build research.html, downloads.html, pruitt_bib.bib,
+and update the bio in index.html from spcv.tex.
 
 Run this script (python generate_research.py) whenever spcv.tex is updated.
 It reads paper entries from spcv.tex — titles, authors, venues, and the
 \webid / \webshort / \webfull / \webtags / \weblinks / \webnotes commands —
-and writes a fresh research.html.
+and writes fresh output files.
 """
 
+import json
 import re, sys
 from pathlib import Path
 
-TEX_FILE   = Path('spcv.tex')
-HTML_FILE  = Path('research.html')
-BIB_FILE   = Path('pruitt_bib.bib')
-INDEX_FILE = Path('index.html')
+TEX_FILE        = Path('spcv.tex')
+HTML_FILE       = Path('research.html')
+BIB_FILE        = Path('pruitt_bib.bib')
+INDEX_FILE      = Path('index.html')
+DOWNLOADS_FILE  = Path('downloads.html')
+MAINTAINED_FILE = Path('maintained.json')
 
 JOURNAL_ABBREVS = {
     'Journal of Finance':                          'JF',
@@ -540,14 +544,16 @@ def filter_bar_html(all_papers):
     L.append('    </div>')
     return '\n'.join(L)
 
-def dropdown_html(working, published, other, older):
+def dropdown_html(working, published, other, older, prefix=''):
+    """Build the nav dropdown HTML.  prefix should be 'research.html' when this
+    dropdown appears on a page other than research.html itself."""
     L = []
     def section(label, papers):
         L.append(f'                    <div class="dropdown-section-label">{label}</div>')
         for p in papers:
             cite = short_cite(p)
             cite_html = f' <span style="font-size:0.8em;color:#8b2332;">{cite}</span>' if cite else ''
-            L.append(f'                    <a href="#{p["id"]}">{p["title"]}{cite_html}</a>')
+            L.append(f'                    <a href="{prefix}#{p["id"]}">{p["title"]}{cite_html}</a>')
     section('Working Papers', working)
     section('Published Papers', published)
     section('Other Articles', other)
@@ -713,6 +719,220 @@ function toggleAbstract(el) {
 '''
 
 # ─────────────────────────────────────────────────────────────────────────────
+# DOWNLOADS PAGE
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Maintained software cards ────────────────────────────────────────────────
+
+def maintained_card_html(item):
+    """Render one maintained-software card from a maintained.json entry."""
+    name     = item.get('name', '')
+    desc     = item.get('description', '')
+    language = item.get('language', '')
+    github   = item.get('github', '')
+    install  = item.get('install', '')
+
+    badge = (f'<span class="dl-lang-badge">{language}</span>' if language else '')
+    footer_parts = []
+    if github:
+        footer_parts.append(f'<a href="{github}" class="dl-pill">GitHub</a>')
+    if install:
+        footer_parts.append(f'<code class="dl-install">{install}</code>')
+    footer = '\n            '.join(footer_parts)
+
+    return (
+        '        <div class="dl-maintained-card">\n'
+        f'            <div class="dl-maintained-name">{name}{(" " + badge) if badge else ""}</div>\n'
+        f'            <div class="dl-maintained-desc">{desc}</div>\n'
+        '            <div class="dl-maintained-footer">\n'
+        f'                {footer}\n'
+        '            </div>\n'
+        '        </div>'
+    )
+
+def maintained_section_html():
+    """Read maintained.json and return the maintained grid HTML, or '' if empty."""
+    if not MAINTAINED_FILE.exists():
+        return ''
+    items = json.loads(MAINTAINED_FILE.read_text(encoding='utf-8'))
+    if not items:
+        return ''
+    cards = '\n'.join(maintained_card_html(item) for item in items)
+    return (
+        '    <h2 class="dl-section-heading">Maintained Software</h2>\n'
+        '    <p class="dl-intro">Code I actively develop and maintain.</p>\n'
+        '    <div class="dl-maintained-grid">\n'
+        f'{cards}\n'
+        '    </div>\n'
+    )
+
+# ── Archive table ─────────────────────────────────────────────────────────────
+
+# Link labels that are NOT substantive archives (preprint/interview/draft links)
+NON_ARCHIVE_LABELS = {'ssrn', 'draft', 'paper', 'faculti interview'}
+
+def archive_links(p):
+    """Return only the links that represent substantive download archives."""
+    return [lk for lk in p['links']
+            if lk['label'].lower() not in NON_ARCHIVE_LABELS]
+
+def dl_authors_display(p):
+    """Format 'Last1, Last2, and Last3 (year)' from webauthors + venue year."""
+    authors_bib = p.get('authors_bib', '')
+    lasts = []
+    if authors_bib:
+        for name in [a.strip() for a in authors_bib.split(' and ')]:
+            last = name.split(',')[0].strip() if ',' in name else name.split()[-1]
+            lasts.append(last)
+    if len(lasts) == 1:
+        author_str = lasts[0]
+    elif len(lasts) == 2:
+        author_str = f'{lasts[0]} and {lasts[1]}'
+    elif lasts:
+        author_str = ', '.join(lasts[:-1]) + f', and {lasts[-1]}'
+    else:
+        author_str = p.get('title', '')
+
+    year = p['venue'].get('year', '')
+    if not year:
+        ym = re.search(r'(\d{4})', p.get('id', ''))
+        if ym:
+            year = ym.group(1)
+    return f'{author_str} ({year})' if year else author_str
+
+def dl_row_html(p):
+    """Render one archive table row for a paper with substantive download links."""
+    links = archive_links(p)
+    if not links:
+        return ''
+
+    display   = dl_authors_display(p)
+    journal   = p['venue'].get('journal', '')
+    if not journal and p['section'] == 'working':
+        journal = 'working paper'
+
+    paper_href = f'research.html#{p["id"]}' if p.get('id') else ''
+    if paper_href:
+        left_name = f'<a href="{paper_href}" class="dl-paper-link">{display}</a>'
+    else:
+        left_name = f'<span class="dl-paper-link">{display}</span>'
+
+    journal_html = (f'<span class="dl-journal"><em>{journal}</em></span>'
+                    if journal else '')
+
+    pills = '\n                '.join(
+        f'<a href="{lk["url"]}" class="dl-pill">{lk["label"]}</a>'
+        for lk in links
+    )
+
+    L = ['        <div class="dl-row">',
+         '            <div class="dl-paper-cell">',
+         f'                {left_name}']
+    if journal_html:
+        L.append(f'                {journal_html}')
+    L += ['            </div>',
+          '            <div class="dl-links-cell">',
+          f'                {pills}',
+          '            </div>',
+          '        </div>']
+    return '\n'.join(L)
+
+def _dl_sort_key(p):
+    """Sort published first (by year desc), then working, then other, then older."""
+    sec_order = {'published': 0, 'other': 1, 'working': 2, 'older': 3}
+    year = p['venue'].get('year', '')
+    if not year:
+        ym = re.search(r'(\d{4})', p.get('id', ''))
+        if ym:
+            year = ym.group(1)
+    yr = -int(year) if year else 0
+    return (sec_order.get(p['section'], 4), yr)
+
+DOWNLOADS_TEMPLATE = '''\
+<!DOCTYPE html>
+<!-- Generated by generate_research.py \u2014 do not edit by hand -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads \u2013 Seth Pruitt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="site-name"><a href="index.html">Seth Pruitt</a></div>
+        <nav>
+            <a href="index.html" class="nav-link">About</a>
+
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" id="research-toggle" onclick="toggleDropdown()">
+                    Research <span class="arrow">\u25be</span>
+                </button>
+                <div class="dropdown-menu" id="research-dropdown">
+{DROPDOWN}
+                </div>
+            </div>
+
+            <a href="downloads.html" class="nav-link active">Downloads</a>
+        </nav>
+    </div>
+</header>
+
+<div class="page">
+
+{MAINTAINED}
+    <h2 class="dl-section-heading">Replication Archives</h2>
+    <p class="dl-intro">Code and data for published and working papers, as released alongside each paper.</p>
+
+    <div class="dl-archive-table">
+{ARCHIVE_ROWS}
+    </div>
+
+</div><!-- .page -->
+
+<footer>economics research by Seth Pruitt</footer>
+
+<script>
+function toggleDropdown() {
+    const toggle = document.getElementById(\'research-toggle\');
+    const menu   = document.getElementById(\'research-dropdown\');
+    toggle.classList.toggle(\'open\');
+    menu.classList.toggle(\'open\');
+}
+document.addEventListener(\'click\', function(e) {
+    const dropdown = document.querySelector(\'.nav-dropdown\');
+    if (dropdown && !dropdown.contains(e.target)) {
+        document.getElementById(\'research-toggle\').classList.remove(\'open\');
+        document.getElementById(\'research-dropdown\').classList.remove(\'open\');
+    }
+});
+</script>
+
+</body>
+</html>
+'''
+
+def generate_downloads(all_papers, working, published, other, older):
+    """Generate downloads.html from papers that have substantive archive links."""
+    papers_with_dl = sorted(
+        [p for p in all_papers if archive_links(p)],
+        key=_dl_sort_key
+    )
+    rows = '\n'.join(dl_row_html(p) for p in papers_with_dl if dl_row_html(p))
+    # Use research.html prefix so dropdown links navigate correctly from downloads.html
+    dl_dropdown = dropdown_html(working, published, other, older, prefix='research.html')
+    html = DOWNLOADS_TEMPLATE
+    html = html.replace('{DROPDOWN}',     dl_dropdown)
+    html = html.replace('{MAINTAINED}',   maintained_section_html())
+    html = html.replace('{ARCHIVE_ROWS}', rows)
+    return html
+
+# ─────────────────────────────────────────────────────────────────────────────
 # BIO / INDEX.HTML
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -738,17 +958,20 @@ def update_index_bio(bio_html):
         return
     index = INDEX_FILE.read_text(encoding='utf-8')
     new_block = f'            <!-- bio-start -->\n{bio_html}\n            <!-- bio-end -->'
-    index_new = re.sub(
+    index_new, n = re.subn(
         r'            <!-- bio-start -->.*?<!-- bio-end -->',
         new_block,
         index,
         flags=re.DOTALL,
     )
-    if index_new == index:
+    if n == 0:
         print("Warning: bio markers not found in index.html — no update made.", file=sys.stderr)
         return
-    INDEX_FILE.write_text(index_new, encoding='utf-8')
-    print(f"Updated bio in {INDEX_FILE}")
+    if index_new == index:
+        print(f"Bio in {INDEX_FILE} already up to date.")
+    else:
+        INDEX_FILE.write_text(index_new, encoding='utf-8')
+        print(f"Updated bio in {INDEX_FILE}")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # MAIN
@@ -768,8 +991,10 @@ def main():
 
     all_papers = working + published + other + older
 
+    dropdown = dropdown_html(working, published, other, older)
+
     html = PAGE_TEMPLATE
-    html = html.replace('{DROPDOWN}',    dropdown_html(working, published, other, older))
+    html = html.replace('{DROPDOWN}',    dropdown)
     html = html.replace('{FILTER_BAR}',  filter_bar_html(all_papers))
     html = html.replace('{WORKING}',     section_html('Working Papers',       'working',       working))
     html = html.replace('{PUBLISHED}',   section_html('Published Papers',     'published',     published))
@@ -778,6 +1003,10 @@ def main():
 
     HTML_FILE.write_text(html, encoding='utf-8')
     print(f"Wrote {HTML_FILE}  ({len(html):,} bytes)")
+
+    dl_html = generate_downloads(all_papers, working, published, other, older)
+    DOWNLOADS_FILE.write_text(dl_html, encoding='utf-8')
+    print(f"Wrote {DOWNLOADS_FILE}  ({len(dl_html):,} bytes)")
 
     bib = generate_bib(all_papers)
     BIB_FILE.write_text(bib, encoding='utf-8')

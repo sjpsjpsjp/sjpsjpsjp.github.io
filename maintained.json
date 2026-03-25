@@ -1,0 +1,9 @@
+[
+  {
+    "name": "IPCA",
+    "description": "Python implementation, building off of the IPCA estimator (Kelly, Pruitt, and Su 2019).",
+    "language": "Python",
+    "github": "https://github.com/sjpsjpsjp/ipca",
+    "install": "pip install git+https://github.com/sjpsjpsjp/ipca.git"
+  }
+]
