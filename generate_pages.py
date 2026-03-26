@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-generate_research.py — Build research.html, downloads.html, pruitt_bib.bib,
-and update the bio in index.html from spcv.tex.
+generate_pages.py — Build research.html, downloads.html, pruitt_bib.bib,
+and update the bio and honors in index.html from spcv.tex.
 
-Run this script (python generate_research.py) whenever spcv.tex is updated.
+Run this script (python generate_pages.py) whenever spcv.tex is updated.
 It reads paper entries from spcv.tex — titles, authors, venues, and the
 \webid / \webshort / \webfull / \webtags / \weblinks / \webnotes commands —
 and writes fresh output files.
@@ -979,6 +979,71 @@ def update_index_bio(bio_html):
         INDEX_FILE.write_text(index_new, encoding='utf-8')
         print(f"Updated bio in {INDEX_FILE}")
 
+def parse_honors(tex):
+    """Extract all \\section{Honors} entries.
+
+    Returns a list of (url_or_None, text) tuples in document order.
+    Linked entries get a URL; plain-text entries get url=None.
+    LaTeX en-dashes (--) are converted to Unicode –.
+    """
+    m = re.search(
+        r'\\section\s*\{[^}]*Honors[^}]*\}(.*?)(?=\\section|\\end\{resume\})',
+        tex, re.DOTALL,
+    )
+    if not m:
+        return []
+    raw = m.group(1)
+    # Split on LaTeX line-break \\
+    entries = re.split(r'\\\\\s*', raw)
+    results = []
+    for entry in entries:
+        entry = entry.strip()
+        if not entry:
+            continue
+        hm = re.match(r'\\href\s*\{([^}]+)\}\s*\{([^}]+)\}', entry)
+        if hm:
+            url  = hm.group(1).strip()
+            text = hm.group(2).strip()
+        else:
+            url  = None
+            text = entry
+        # Convert LaTeX en-dash
+        text = text.replace('--', '\u2013')
+        results.append((url, text))
+    return results
+
+
+def update_index_honors(honors):
+    """Replace the <!-- honors-start/end --> block in index.html."""
+    if not INDEX_FILE.exists():
+        print(f"Warning: {INDEX_FILE} not found — skipping honors update.", file=sys.stderr)
+        return
+    lines = ['    <ul class="awards-list">']
+    for url, text in honors:
+        if url:
+            lines.append(f'        <li><a href="{url}">{text}</a></li>')
+        else:
+            lines.append(f'        <li>{text}</li>')
+    lines.append('    </ul>')
+    inner = '\n'.join(lines)
+    new_block = f'    <!-- honors-start -->\n{inner}\n    <!-- honors-end -->'
+
+    index = INDEX_FILE.read_text(encoding='utf-8')
+    index_new, n = re.subn(
+        r'    <!-- honors-start -->.*?<!-- honors-end -->',
+        new_block,
+        index,
+        flags=re.DOTALL,
+    )
+    if n == 0:
+        print("Warning: honors markers not found in index.html — no update made.", file=sys.stderr)
+        return
+    if index_new == index:
+        print(f"Honors in {INDEX_FILE} already up to date.")
+    else:
+        INDEX_FILE.write_text(index_new, encoding='utf-8')
+        print(f"Updated honors in {INDEX_FILE}")
+
 # ─────────────────────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1023,6 +1088,12 @@ def main():
         update_index_bio(bio_html)
     else:
         print("Warning: Bio section not found in spcv.tex.", file=sys.stderr)
+
+    honors = parse_honors(tex)
+    if honors:
+        update_index_honors(honors)
+    else:
+        print("Warning: Honors section not found in spcv.tex.", file=sys.stderr)
 
 if __name__ == '__main__':
     main()
