@@ -547,7 +547,7 @@ def filter_bar_html(all_papers):
 def dropdown_html(working, published, other, older, prefix=''):
     """Build the nav dropdown HTML.  prefix should be 'research.html' when this
     dropdown appears on a page other than research.html itself."""
-    L = []
+    L = ['                    <a href="research.html" class="dropdown-top-link">\u2191 Research</a>']
     def section(label, papers):
         L.append(f'                    <div class="dropdown-section-label">{label}</div>')
         for p in papers:
@@ -607,6 +607,8 @@ PAGE_TEMPLATE = '''\
         </nav>
     </div>
 </header>
+
+<div class="canyon-banner"></div>
 
 <div class="page">
 
@@ -882,6 +884,8 @@ DOWNLOADS_TEMPLATE = '''\
         </nav>
     </div>
 </header>
+
+<div class="canyon-banner"></div>
 
 <div class="page">
 

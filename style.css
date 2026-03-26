@@ -164,6 +164,13 @@ nav a.nav-link.active {
     border-top: none;
 }
 
+a.dropdown-top-link {
+    font-weight: 600;
+    color: var(--maroon-dark) !important;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2px;
+}
+
 .dropdown-menu a {
     display: block;
     padding: 6px 14px;
@@ -657,16 +664,40 @@ h2.section-heading {
     color: var(--white);
 }
 
+/* ---- Canyon banner ---- */
+
+.canyon-banner {
+    width: 100%;
+    height: 160px;
+    background-image: url('Canyon_River_Tree_(165872763).jpeg');
+    background-size: cover;
+    background-position: center 38%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.canyon-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: linear-gradient(to bottom, transparent, var(--maroon-light));
+}
+
 /* ---- Footer ---- */
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 28px 20px;
     font-size: 0.8em;
-    color: rgba(139,35,50,0.5);
-    background: var(--maroon-light);
+    color: rgba(100,20,30,0.7);
     border-top: 1px solid var(--border);
     margin-top: 20px;
+    background:
+        linear-gradient(rgba(240,221,224,0.82), rgba(240,221,224,0.82)),
+        url('Canyon_River_Tree_(165872763).jpeg') center 58% / cover;
 }
 
 /* ---- Responsive ---- */
