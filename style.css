@@ -549,6 +549,7 @@ h2.section-heading {
     min-width: 280px;
     max-width: 500px;
     flex: 1;
+    scroll-margin-top: 72px;
 }
 
 .dl-maintained-name {

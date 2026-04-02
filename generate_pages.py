@@ -743,8 +743,9 @@ def maintained_card_html(item):
         footer_parts.append(f'<code class="dl-install">{install}</code>')
     footer = '\n            '.join(footer_parts)
 
+    slug = re.sub(r'\s+', '-', name.strip().lower())
     return (
-        '        <div class="dl-maintained-card">\n'
+        f'        <div class="dl-maintained-card" id="maintained-{slug}">\n'
         f'            <div class="dl-maintained-name">{name}{(" " + badge) if badge else ""}</div>\n'
         f'            <div class="dl-maintained-desc">{desc}</div>\n'
         '            <div class="dl-maintained-footer">\n'
@@ -772,7 +773,7 @@ def maintained_section_html():
 # ── Archive table ─────────────────────────────────────────────────────────────
 
 # Link labels that are NOT substantive archives (preprint/interview/draft links)
-NON_ARCHIVE_LABELS = {'ssrn', 'draft', 'paper', 'faculti interview'}
+NON_ARCHIVE_LABELS = {'ssrn', 'draft', 'paper', 'faculti interview', 'software'}
 
 def archive_links(p):
     """Return only the links that represent substantive download archives."""
