@@ -1001,6 +1001,9 @@ def parse_honors(tex):
         entry = entry.strip()
         if not entry:
             continue
+        # \webhide anywhere on the line → exclude from website
+        if r'\webhide' in entry:
+            continue
         hm = re.match(r'\\href\s*\{([^}]+)\}\s*\{([^}]+)\}', entry)
         if hm:
             url  = hm.group(1).strip()

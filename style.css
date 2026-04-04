@@ -704,6 +704,10 @@ footer {
 
 /* ---- Responsive ---- */
 
+@media (min-width: 768px) {
+    .canyon-banner { background-position: center 30%; }
+}
+
 @media (max-width: 640px) {
     header { padding: 0 16px; }
     .header-inner { height: 52px; }
