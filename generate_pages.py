@@ -10,7 +10,7 @@ and writes fresh output files.
 """
 
 import json
-import re, sys
+import re, subprocess, sys
 from pathlib import Path
 
 TEX_FILE        = Path('spcv.tex')
@@ -1098,6 +1098,26 @@ def main():
         update_index_honors(honors)
     else:
         print("Warning: Honors section not found in spcv.tex.", file=sys.stderr)
+
+    compile_pdf()
+
+
+def compile_pdf():
+    """Compile spcv.tex → spcv.pdf using pdflatex (run twice for references)."""
+    if not TEX_FILE.exists():
+        print(f"Warning: {TEX_FILE} not found — skipping PDF compile.", file=sys.stderr)
+        return
+    cmd = ['pdflatex', '-interaction=nonstopmode', str(TEX_FILE)]
+    cwd = TEX_FILE.parent.resolve()
+    for run in range(2):
+        result = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
+        if result.returncode != 0:
+            log_tail = '\n'.join(result.stdout.splitlines()[-20:])
+            print(f"pdflatex error (run {run+1}):\n{log_tail}", file=sys.stderr)
+            return
+    pdf = cwd / 'spcv.pdf'
+    print(f"Compiled {pdf}  ({pdf.stat().st_size:,} bytes)")
+
 
 if __name__ == '__main__':
     main()
