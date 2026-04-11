@@ -958,6 +958,30 @@ def parse_bio(tex, macros):
     html = re.sub(r'such as (<em>)', r'such as the \1', html)
     return f'            <p>{html}</p>'
 
+def update_index_dropdown(working, published, other, older):
+    """Replace the <!-- dropdown-start/end --> block in index.html with generated dropdown."""
+    if not INDEX_FILE.exists():
+        print(f"Warning: {INDEX_FILE} not found — skipping dropdown update.", file=sys.stderr)
+        return
+    # Use research.html prefix so links navigate correctly from index.html
+    inner = dropdown_html(working, published, other, older, prefix='research.html')
+    new_block = f'                    <!-- dropdown-start -->\n{inner}\n                    <!-- dropdown-end -->'
+    index = INDEX_FILE.read_text(encoding='utf-8')
+    index_new, n = re.subn(
+        r'                    <!-- dropdown-start -->.*?<!-- dropdown-end -->',
+        new_block,
+        index,
+        flags=re.DOTALL,
+    )
+    if n == 0:
+        print("Warning: dropdown markers not found in index.html — no update made.", file=sys.stderr)
+        return
+    if index_new == index:
+        print(f"Dropdown in {INDEX_FILE} already up to date.")
+    else:
+        INDEX_FILE.write_text(index_new, encoding='utf-8')
+        print(f"Updated dropdown in {INDEX_FILE}")
+
 def update_index_bio(bio_html):
     """Replace the <!-- bio-start/end --> block in index.html with new bio_html."""
     if not INDEX_FILE.exists():
@@ -1098,6 +1122,8 @@ def main():
         update_index_honors(honors)
     else:
         print("Warning: Honors section not found in spcv.tex.", file=sys.stderr)
+
+    update_index_dropdown(working, published, other, older)
 
     compile_pdf()
 
